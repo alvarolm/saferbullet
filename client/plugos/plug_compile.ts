@@ -4,7 +4,7 @@ import { denoPlugins } from "@luca/esbuild-deno-loader";
 import * as esbuild from "esbuild";
 import { bundleAssets } from "../asset_bundle/builder.ts";
 import type { Manifest } from "./types.ts";
-import { version } from "../../version.ts";
+// import { version } from "../../version.ts";
 
 // worker runtime retrieved from local source instead of an remote one without verification
 const workerRuntimeUrl = new URL("./worker_runtime.ts", import.meta.url).href;

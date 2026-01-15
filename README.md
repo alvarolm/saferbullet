@@ -12,7 +12,7 @@ References:
 
 # SaferBullet
 
-This is a fork of SilverBullet focused on improving security, its 100% compatible with SilverBullet and can be used as a drop-in replacement.
+This is a fork of SilverBullet focused on improving security, its 100% compatible with SilverBullet (edge) and can be used as a drop-in replacement.
 
 I will try to keep it updated with the latest version of SilverBullet.
 
