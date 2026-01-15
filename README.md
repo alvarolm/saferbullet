@@ -36,4 +36,4 @@ see [saferbullet-changelog.md][saferbullet-changelog.md] for the current impleme
 
 ## LICENSE
 MIT
-[LICENSE.md][./LICENSE.md]
+[LICENSE.md](./LICENSE.md)
