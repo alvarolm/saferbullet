@@ -17,10 +17,7 @@ import {
   luaValueToJS,
   singleResult,
 } from "../space_lua/runtime.ts";
-import {
-  encodeRef,
-  getNameFromPath,
-} from "@alvarolm/saferbullet/lib/ref";
+import { encodeRef, getNameFromPath } from "@alvarolm/saferbullet/lib/ref";
 import { resolveASTReference } from "../space_lua.ts";
 import { LuaWidget } from "./lua_widget.ts";
 import type { PageMeta } from "@alvarolm/saferbullet/type/index";

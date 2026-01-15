@@ -1,9 +1,6 @@
 import { folderName } from "@alvarolm/saferbullet/lib/resolve";
 import { index, language, lua } from "@alvarolm/saferbullet/syscalls";
-import type {
-  DocumentMeta,
-  PageMeta,
-} from "@alvarolm/saferbullet/type/index";
+import type { DocumentMeta, PageMeta } from "@alvarolm/saferbullet/type/index";
 import type { CompleteEvent } from "@alvarolm/saferbullet/type/client";
 
 // Page completion

@@ -7,10 +7,7 @@ import {
 import type { TagObject } from "./tags.ts";
 import type { FrontMatter } from "./frontmatter.ts";
 import { updateITags } from "./tags.ts";
-import type {
-  ObjectValue,
-  PageMeta,
-} from "@alvarolm/saferbullet/type/index";
+import type { ObjectValue, PageMeta } from "@alvarolm/saferbullet/type/index";
 
 type DataObject = ObjectValue<
   {

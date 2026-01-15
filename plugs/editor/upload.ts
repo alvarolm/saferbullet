@@ -4,10 +4,7 @@ import {
   maximumDocumentSize,
 } from "@alvarolm/saferbullet/constants";
 import { resolveMarkdownLink } from "@alvarolm/saferbullet/lib/resolve";
-import {
-  encodePageURI,
-  isValidPath,
-} from "@alvarolm/saferbullet/lib/ref";
+import { encodePageURI, isValidPath } from "@alvarolm/saferbullet/lib/ref";
 import type { UploadFile } from "@alvarolm/saferbullet/type/client";
 
 export async function saveFile(file: UploadFile) {

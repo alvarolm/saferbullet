@@ -22,10 +22,7 @@ import {
   wikiLinkRegex,
 } from "../../client/markdown_parser/constants.ts";
 import { lua, space } from "@alvarolm/saferbullet/syscalls";
-import type {
-  ObjectValue,
-  PageMeta,
-} from "@alvarolm/saferbullet/type/index";
+import type { ObjectValue, PageMeta } from "@alvarolm/saferbullet/type/index";
 import { extractSnippet } from "./snippet.ts";
 
 export type LinkObject = ObjectValue<

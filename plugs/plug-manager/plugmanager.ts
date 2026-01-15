@@ -1,9 +1,4 @@
-import {
-  editor,
-  events,
-  space,
-  system,
-} from "@alvarolm/saferbullet/syscalls";
+import { editor, events, space, system } from "@alvarolm/saferbullet/syscalls";
 import { builtinPlugPaths } from "../builtin_plugs.ts";
 import type { ResolvedPlug } from "@alvarolm/saferbullet/type/event";
 

@@ -1,9 +1,6 @@
 import type { Action, AppViewState } from "./types/ui.ts";
 import type { PageMeta } from "../plug-api/types/index.ts";
-import {
-  isMarkdownPath,
-  parseToRef,
-} from "@alvarolm/saferbullet/lib/ref";
+import { isMarkdownPath, parseToRef } from "@alvarolm/saferbullet/lib/ref";
 
 export default function reducer(
   state: AppViewState,

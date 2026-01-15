@@ -7,10 +7,7 @@ import {
 } from "@alvarolm/saferbullet/lib/tree";
 import { cleanTags, collectTags, updateITags } from "./tags.ts";
 import type { FrontMatter } from "./frontmatter.ts";
-import type {
-  ObjectValue,
-  PageMeta,
-} from "@alvarolm/saferbullet/type/index";
+import type { ObjectValue, PageMeta } from "@alvarolm/saferbullet/type/index";
 import { system } from "@alvarolm/saferbullet/syscalls";
 import { cleanAttributes, collectAttributes } from "./attribute.ts";
 import { collectPageLinks } from "./link.ts";

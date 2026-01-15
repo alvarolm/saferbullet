@@ -1,9 +1,4 @@
-import {
-  editor,
-  lua,
-  markdown,
-  space,
-} from "@alvarolm/saferbullet/syscalls";
+import { editor, lua, markdown, space } from "@alvarolm/saferbullet/syscalls";
 import { getBackLinks, type LinkObject } from "./link.ts";
 import {
   absoluteToRelativePath,

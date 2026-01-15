@@ -6,10 +6,7 @@ import type {
 } from "@codemirror/autocomplete";
 import { tagRegex as mdTagRegex } from "../markdown_parser/constants.ts";
 import { extractHashtag } from "@alvarolm/saferbullet/lib/tags";
-import type {
-  DocumentMeta,
-  PageMeta,
-} from "@alvarolm/saferbullet/type/index";
+import type { DocumentMeta, PageMeta } from "@alvarolm/saferbullet/type/index";
 import {
   getNameFromPath,
   parseToRef,

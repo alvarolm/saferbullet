@@ -6,10 +6,7 @@ import {
   mdLinkRegex,
   wikiLinkRegex,
 } from "../../client/markdown_parser/constants.ts";
-import {
-  getNameFromPath,
-  parseToRef,
-} from "@alvarolm/saferbullet/lib/ref";
+import { getNameFromPath, parseToRef } from "@alvarolm/saferbullet/lib/ref";
 
 export type LinkType = "wikilink" | "markdownlink";
 /**

@@ -13,13 +13,13 @@ name: OSV-Scanner
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
   merge_group:
-    branches: [ "main" ]
+    branches: ["main"]
   schedule:
-    - cron: '0 1 * * *'
+    - cron: "0 1 * * *"
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 permissions:
   # Require writing security events to upload SARIF file to security tab
@@ -38,7 +38,7 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.23'
+          go-version: "1.23"
           cache: false
 
       - name: Cache deno2npm binary
@@ -90,7 +90,7 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.23'
+          go-version: "1.23"
           cache: false
 
       - name: Cache deno2npm binary

@@ -7,10 +7,7 @@ import {
   replaceNodesMatching,
   traverseTree,
 } from "@alvarolm/saferbullet/lib/tree";
-import type {
-  ObjectValue,
-  PageMeta,
-} from "@alvarolm/saferbullet/type/index";
+import type { ObjectValue, PageMeta } from "@alvarolm/saferbullet/type/index";
 import type { CompleteEvent } from "@alvarolm/saferbullet/type/client";
 import { tagRegex } from "../../client/markdown_parser/constants.ts";
 import { extractHashtag } from "@alvarolm/saferbullet/lib/tags";

@@ -3,10 +3,7 @@ import {
   findNodeOfType,
   type ParseTree,
 } from "@alvarolm/saferbullet/lib/tree";
-import type {
-  ObjectValue,
-  PageMeta,
-} from "@alvarolm/saferbullet/type/index";
+import type { ObjectValue, PageMeta } from "@alvarolm/saferbullet/type/index";
 import type { FrontMatter } from "./frontmatter.ts";
 
 export type SpaceLuaObject = ObjectValue<{

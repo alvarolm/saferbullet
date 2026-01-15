@@ -7,10 +7,7 @@ import {
   collectNodesOfType,
   type ParseTree,
 } from "@alvarolm/saferbullet/lib/tree";
-import type {
-  ObjectValue,
-  PageMeta,
-} from "@alvarolm/saferbullet/type/index";
+import type { ObjectValue, PageMeta } from "@alvarolm/saferbullet/type/index";
 import { extractHashtag } from "@alvarolm/saferbullet/lib/tags";
 import type { FrontMatter } from "./frontmatter.ts";
 

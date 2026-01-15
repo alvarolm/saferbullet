@@ -5,15 +5,9 @@ import {
   renderToText,
 } from "@alvarolm/saferbullet/lib/tree";
 import { queryLuaObjects } from "./api.ts";
-import {
-  getNameFromPath,
-  parseToRef,
-} from "@alvarolm/saferbullet/lib/ref";
+import { getNameFromPath, parseToRef } from "@alvarolm/saferbullet/lib/ref";
 import { lua } from "@alvarolm/saferbullet/syscalls";
-import type {
-  ObjectValue,
-  PageMeta,
-} from "@alvarolm/saferbullet/type/index";
+import type { ObjectValue, PageMeta } from "@alvarolm/saferbullet/type/index";
 import type { CompleteEvent } from "@alvarolm/saferbullet/type/client";
 import type { FrontMatter } from "./frontmatter.ts";
 import { cleanAttributes, collectAttributes } from "./attribute.ts";

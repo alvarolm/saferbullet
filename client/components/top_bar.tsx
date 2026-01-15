@@ -9,7 +9,7 @@ import type { IconBaseProps } from "react-icons/types";
 import { MiniEditor } from "./mini_editor.tsx";
 
 export type ActionButton = {
-  icon: FunctionalComponent<FeatherProps | IconBaseProps>;
+  icon: FunctionalComponent<FeatherProps> | FunctionalComponent<IconBaseProps>;
   description: string;
   class?: string;
   callback: () => void;

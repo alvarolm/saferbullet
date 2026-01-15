@@ -1,9 +1,6 @@
 import type { SysCallMapping } from "../system.ts";
 import { parse } from "../../markdown_parser/parse_tree.ts";
-import {
-  type ParseTree,
-  renderToText,
-} from "@alvarolm/saferbullet/lib/tree";
+import { type ParseTree, renderToText } from "@alvarolm/saferbullet/lib/tree";
 import { extendedMarkdownLanguage } from "../../markdown_parser/parser.ts";
 import {
   expandMarkdown,

@@ -1,10 +1,7 @@
 import type { EditorState } from "@codemirror/state";
 import { Decoration } from "@codemirror/view";
 import type { Client } from "../client.ts";
-import {
-  fileName,
-  isBuiltinPath,
-} from "@alvarolm/saferbullet/lib/resolve";
+import { fileName, isBuiltinPath } from "@alvarolm/saferbullet/lib/resolve";
 import {
   encodePageURI,
   encodeRef,

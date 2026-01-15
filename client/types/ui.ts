@@ -5,10 +5,7 @@ import type {
   PanelMode,
 } from "@alvarolm/saferbullet/type/client";
 
-import type {
-  DocumentMeta,
-  PageMeta,
-} from "@alvarolm/saferbullet/type/index";
+import type { DocumentMeta, PageMeta } from "@alvarolm/saferbullet/type/index";
 import type { Path } from "@alvarolm/saferbullet/lib/ref";
 import type { SyncStatus } from "../spaces/sync.ts";
 

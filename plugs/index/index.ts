@@ -1,7 +1,4 @@
-import type {
-  ObjectValue,
-  PageMeta,
-} from "@alvarolm/saferbullet/type/index";
+import type { ObjectValue, PageMeta } from "@alvarolm/saferbullet/type/index";
 import { extractFrontMatter, type FrontMatter } from "./frontmatter.ts";
 import type { ParseTree } from "@alvarolm/saferbullet/lib/tree";
 import type { IndexTreeEvent } from "@alvarolm/saferbullet/type/event";

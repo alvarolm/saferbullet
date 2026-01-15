@@ -70,10 +70,7 @@ import type {
 } from "@alvarolm/saferbullet/type/index";
 import { parseMarkdown } from "./markdown_parser/parser.ts";
 import { CheckedSpacePrimitives } from "./spaces/checked_space_primitives.ts";
-import {
-  notFoundError,
-  offlineError,
-} from "@alvarolm/saferbullet/constants";
+import { notFoundError, offlineError } from "@alvarolm/saferbullet/constants";
 import { Augmenter } from "./data/data_augmenter.ts";
 import { EncryptedKvPrimitives } from "./data/encrypted_kv_primitives.ts";
 import type { KvPrimitives } from "./data/kv_primitives.ts";

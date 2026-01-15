@@ -3,11 +3,7 @@ import type { SpaceLuaObject } from "../plugs/index/space_lua.ts";
 import { LuaEnv, LuaRuntimeError, LuaStackFrame } from "./space_lua/runtime.ts";
 import { parse as parseLua, parseExpressionString } from "./space_lua/parse.ts";
 import { evalStatement } from "./space_lua/eval.ts";
-import {
-  encodeRef,
-  parseToRef,
-  type Ref,
-} from "@alvarolm/saferbullet/lib/ref";
+import { encodeRef, parseToRef, type Ref } from "@alvarolm/saferbullet/lib/ref";
 import type { ASTCtx } from "./space_lua/ast.ts";
 import { buildLuaEnv } from "./space_lua_api.ts";
 import type { LuaCollectionQuery } from "./space_lua/query_collection.ts";
