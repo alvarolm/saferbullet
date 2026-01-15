@@ -6,12 +6,8 @@ import { bundleAssets } from "../asset_bundle/builder.ts";
 import type { Manifest } from "./types.ts";
 import { version } from "../../version.ts";
 
-// const workerRuntimeUrl = new URL(
-//   "../lib/plugos/worker_runtime.ts",
-//   import.meta.url,
-// );
-const workerRuntimeUrl =
-  `https://deno.land/x/silverbullet@${version}/client/plugos/worker_runtime.ts`;
+// worker runtime retrieved from local source instead of an remote one without verification
+const workerRuntimeUrl = new URL("./worker_runtime.ts", import.meta.url).href;
 
 export type CompileOptions = {
   debug?: boolean;
@@ -107,7 +103,7 @@ setupMessageListener(functionMapping, manifest, self.postMessage);
     globalName: "mod",
     platform: "browser",
     sourcemap: "linked",
-    minify: !options.debug,
+    minify: false,
     outfile: outFile,
     metafile: options.info,
     treeShaking: true,

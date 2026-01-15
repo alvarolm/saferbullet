@@ -100,6 +100,12 @@ func handleFsPut(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if err := fsProtection(path, body); err != nil {
+		log.Printf("fs protection error: %v\n", err)
+		http.Error(w, "fs protection triggered", http.StatusForbidden)
+		return
+	}
+
 	// Write file
 	meta, err := spaceConfig.SpacePrimitives.WriteFile(path, body, getFileMetaFromHeaders(r.Header, path))
 	if err != nil {
