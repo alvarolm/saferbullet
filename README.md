@@ -18,8 +18,6 @@ I will try to keep it updated with the latest version of SilverBullet.
 
 I'm also evaluating the possibility of a "ready to deploy" binary that includes all the missing features to run SaferBullet in a production environment (tls, file system encryption, etc).
 
-This is project is an effort with NO GUARANTEE WHATSOEVER, use at your own risk.
-
 ## Improvements
 
 - regular checks for vulnerabilities in dependencies [WIP]
