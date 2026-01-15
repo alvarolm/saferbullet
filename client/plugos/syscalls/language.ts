@@ -1,6 +1,6 @@
 import type { SysCallMapping } from "../system.ts";
 import { parse } from "../../markdown_parser/parse_tree.ts";
-import type { ParseTree } from "@silverbulletmd/silverbullet/lib/tree";
+import type { ParseTree } from "@alvarolm/saferbullet/lib/tree";
 import { builtinLanguages, languageFor } from "../../languages.ts";
 
 export function languageSyscalls(): SysCallMapping {

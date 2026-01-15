@@ -2,7 +2,7 @@ import {
   collectNodesOfType,
   findNodeOfType,
   renderToText,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import { assertEquals, assertNotEquals } from "@std/assert";
 import { parseMarkdown } from "./parser.ts";
 import { extractHashtag } from "../../plug-api/lib/tags.ts";

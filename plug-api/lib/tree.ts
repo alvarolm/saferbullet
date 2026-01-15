@@ -1,4 +1,4 @@
-import { deepClone } from "@silverbulletmd/silverbullet/lib/json";
+import { deepClone } from "@alvarolm/saferbullet/lib/json";
 
 export type ParseTree = {
   type?: string; // undefined === text node

@@ -1,4 +1,4 @@
-import { system } from "@silverbulletmd/silverbullet/syscalls";
+import { system } from "@alvarolm/saferbullet/syscalls";
 import type { ObjectValue } from "../../plug-api/types/index.ts";
 
 import type { KV, KvQuery } from "../../plug-api/types/datastore.ts";

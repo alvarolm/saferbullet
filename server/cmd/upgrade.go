@@ -26,7 +26,7 @@ func UpgradeCommand() *cobra.Command {
 		Use: "upgrade",
 		Run: func(cmd *cobra.Command, args []string) {
 			fmt.Println("Now going to attempt an upgrade...")
-			if err := upgrade("https://github.com/silverbulletmd/silverbullet/releases/latest/download"); err != nil {
+			if err := upgrade("https://github.com/alvarolm/saferbullet/releases/latest/download"); err != nil {
 				log.Fatal(err)
 			}
 		},
@@ -38,7 +38,7 @@ func UpgradeEdgeCommand() *cobra.Command {
 		Use: "upgrade-edge",
 		Run: func(cmd *cobra.Command, args []string) {
 			fmt.Println("Now going to attempt an upgrade...")
-			if err := upgrade("https://github.com/silverbulletmd/silverbullet/releases/download/edge"); err != nil {
+			if err := upgrade("https://github.com/alvarolm/saferbullet/releases/download/edge"); err != nil {
 				log.Fatal(err)
 			}
 		},

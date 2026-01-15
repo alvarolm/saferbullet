@@ -5,10 +5,10 @@ import {
   type ParseTree,
   renderToText,
   replaceNodesMatching,
-} from "@silverbulletmd/silverbullet/lib/tree";
-import { cleanupJSON } from "@silverbulletmd/silverbullet/lib/json";
+} from "@alvarolm/saferbullet/lib/tree";
+import { cleanupJSON } from "@alvarolm/saferbullet/lib/json";
 import YAML from "js-yaml";
-import { extractHashtag } from "@silverbulletmd/silverbullet/lib/tags";
+import { extractHashtag } from "@alvarolm/saferbullet/lib/tags";
 
 export type FrontMatter = { tags?: string[] } & Record<string, any>;
 

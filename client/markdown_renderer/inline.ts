@@ -4,13 +4,13 @@ import {
   type ParseTree,
   renderToText,
   replaceNodesMatchingAsync,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import {
   getPathExtension,
   isMarkdownPath,
   parseToRef,
-} from "@silverbulletmd/silverbullet/lib/ref";
-import { isLocalURL } from "@silverbulletmd/silverbullet/lib/resolve";
+} from "@alvarolm/saferbullet/lib/ref";
+import { isLocalURL } from "@alvarolm/saferbullet/lib/resolve";
 import { mime } from "mimetypes";
 import { LuaStackFrame, LuaTable } from "../space_lua/runtime.ts";
 import { parseMarkdown } from "../markdown_parser/parser.ts";
@@ -24,7 +24,7 @@ import {
   nameFromTransclusion,
   parseTransclusion,
   type Transclusion,
-} from "@silverbulletmd/silverbullet/lib/transclusion";
+} from "@alvarolm/saferbullet/lib/transclusion";
 import type { Space } from "../space.ts";
 import type { SpaceLuaEnvironment } from "../space_lua.ts";
 

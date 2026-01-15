@@ -4,11 +4,11 @@ import {
   type ParseTree,
   renderToText,
   traverseTree,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import {
   isLocalURL,
   resolveMarkdownLink,
-} from "@silverbulletmd/silverbullet/lib/resolve";
+} from "@alvarolm/saferbullet/lib/resolve";
 import { queryLuaObjects } from "./api.ts";
 import type { FrontMatter } from "./frontmatter.ts";
 import { updateITags } from "./tags.ts";
@@ -16,16 +16,16 @@ import {
   getNameFromPath,
   isMarkdownPath,
   parseToRef,
-} from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/ref";
 import {
   mdLinkRegex,
   wikiLinkRegex,
 } from "../../client/markdown_parser/constants.ts";
-import { lua, space } from "@silverbulletmd/silverbullet/syscalls";
+import { lua, space } from "@alvarolm/saferbullet/syscalls";
 import type {
   ObjectValue,
   PageMeta,
-} from "@silverbulletmd/silverbullet/type/index";
+} from "@alvarolm/saferbullet/type/index";
 import { extractSnippet } from "./snippet.ts";
 
 export type LinkObject = ObjectValue<

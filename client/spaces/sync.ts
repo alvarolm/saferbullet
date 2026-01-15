@@ -3,9 +3,9 @@
  */
 import type { SpacePrimitives } from "./space_primitives.ts";
 import { EventEmitter } from "../plugos/event.ts";
-import type { FileMeta } from "@silverbulletmd/silverbullet/type/index";
-import { notFoundError } from "@silverbulletmd/silverbullet/constants";
-import { processWithConcurrency } from "@silverbulletmd/silverbullet/lib/async";
+import type { FileMeta } from "@alvarolm/saferbullet/type/index";
+import { notFoundError } from "@alvarolm/saferbullet/constants";
+import { processWithConcurrency } from "@alvarolm/saferbullet/lib/async";
 
 const syncConcurrency = 3;
 

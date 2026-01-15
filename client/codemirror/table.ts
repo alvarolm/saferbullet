@@ -11,13 +11,13 @@ import { renderMarkdownToHtml } from "../markdown_renderer/markdown_render.ts";
 import {
   type ParseTree,
   renderToText,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import { lezerToParseTree } from "../markdown_parser/parse_tree.ts";
 import type { Client } from "../client.ts";
 import {
   isLocalURL,
   resolveMarkdownLink,
-} from "@silverbulletmd/silverbullet/lib/resolve";
+} from "@alvarolm/saferbullet/lib/resolve";
 import { expandMarkdown } from "../markdown_renderer/inline.ts";
 import { attachWidgetEventHandlers } from "./widget_util.ts";
 

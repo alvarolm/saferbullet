@@ -3,9 +3,9 @@ import {
   type ParseTree,
   replaceNodesMatching,
   traverseTree,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 
-import { cleanupJSON } from "@silverbulletmd/silverbullet/lib/json";
+import { cleanupJSON } from "@alvarolm/saferbullet/lib/json";
 
 import YAML from "js-yaml";
 

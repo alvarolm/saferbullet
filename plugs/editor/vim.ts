@@ -1,4 +1,4 @@
-import { clientStore, editor } from "@silverbulletmd/silverbullet/syscalls";
+import { clientStore, editor } from "@alvarolm/saferbullet/syscalls";
 
 export async function toggleVimMode() {
   let vimMode = await clientStore.get("vimMode");

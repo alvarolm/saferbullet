@@ -3,9 +3,9 @@ import {
   events,
   space,
   system,
-} from "@silverbulletmd/silverbullet/syscalls";
+} from "@alvarolm/saferbullet/syscalls";
 import { builtinPlugPaths } from "../builtin_plugs.ts";
-import type { ResolvedPlug } from "@silverbulletmd/silverbullet/type/event";
+import type { ResolvedPlug } from "@alvarolm/saferbullet/type/event";
 
 export async function reloadPlugsCommand() {
   console.log("Reloading plug...");

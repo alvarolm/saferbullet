@@ -3,7 +3,7 @@ import {
   index,
   space,
   sync,
-} from "@silverbulletmd/silverbullet/syscalls";
+} from "@alvarolm/saferbullet/syscalls";
 
 export async function syncSpaceCommand() {
   await editor.flashNotification("Syncing space...");

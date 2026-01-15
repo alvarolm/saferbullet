@@ -15,7 +15,7 @@ import type {
   EnrichedClickEvent,
   FilterOption,
   SlashCompletions,
-} from "@silverbulletmd/silverbullet/type/client";
+} from "@alvarolm/saferbullet/type/client";
 import { EventHook } from "./plugos/hooks/event.ts";
 import type { Command } from "./types/command.ts";
 import {
@@ -34,9 +34,9 @@ import type {
 import type {
   PageCreatingContent,
   PageCreatingEvent,
-} from "@silverbulletmd/silverbullet/type/event";
+} from "@alvarolm/saferbullet/type/event";
 import type { StyleObject } from "../plugs/index/space_style.ts";
-import { jitter, throttle } from "@silverbulletmd/silverbullet/lib/async";
+import { jitter, throttle } from "@alvarolm/saferbullet/lib/async";
 import { EventedSpacePrimitives } from "./spaces/evented_space_primitives.ts";
 import { HttpSpacePrimitives } from "./spaces/http_space_primitives.ts";
 import {
@@ -49,7 +49,7 @@ import {
   parseToRef,
   type Path,
   type Ref,
-} from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/ref";
 import { ClientSystem } from "./client_system.ts";
 import { createEditorState, isValidEditor } from "./codemirror/editor_state.ts";
 import { MainUI } from "./editor_ui.tsx";
@@ -57,7 +57,7 @@ import { DataStore } from "./data/datastore.ts";
 import { IndexedDBKvPrimitives } from "./data/indexeddb_kv_primitives.ts";
 import { DataStoreMQ } from "./data/mq.datastore.ts";
 
-import { LimitedMap } from "@silverbulletmd/silverbullet/lib/limited_map";
+import { LimitedMap } from "@alvarolm/saferbullet/lib/limited_map";
 import { fsEndpoint } from "./spaces/constants.ts";
 import { diffAndPrepareChanges } from "./codemirror/cm_util.ts";
 import { DocumentEditor } from "./document_editor.ts";
@@ -67,17 +67,17 @@ import type {
   DocumentMeta,
   FileMeta,
   PageMeta,
-} from "@silverbulletmd/silverbullet/type/index";
+} from "@alvarolm/saferbullet/type/index";
 import { parseMarkdown } from "./markdown_parser/parser.ts";
 import { CheckedSpacePrimitives } from "./spaces/checked_space_primitives.ts";
 import {
   notFoundError,
   offlineError,
-} from "@silverbulletmd/silverbullet/constants";
+} from "@alvarolm/saferbullet/constants";
 import { Augmenter } from "./data/data_augmenter.ts";
 import { EncryptedKvPrimitives } from "./data/encrypted_kv_primitives.ts";
 import type { KvPrimitives } from "./data/kv_primitives.ts";
-import { deriveDbName } from "@silverbulletmd/silverbullet/lib/crypto";
+import { deriveDbName } from "@alvarolm/saferbullet/lib/crypto";
 import { LuaRuntimeError } from "./space_lua/runtime.ts";
 import { resolveASTReference } from "./space_lua.ts";
 

@@ -1,21 +1,21 @@
 import { FilterList } from "./filter.tsx";
-import type { FilterOption } from "@silverbulletmd/silverbullet/type/client";
+import type { FilterOption } from "@alvarolm/saferbullet/type/client";
 import type {
   CompletionContext,
   CompletionResult,
 } from "@codemirror/autocomplete";
 import { tagRegex as mdTagRegex } from "../markdown_parser/constants.ts";
-import { extractHashtag } from "@silverbulletmd/silverbullet/lib/tags";
+import { extractHashtag } from "@alvarolm/saferbullet/lib/tags";
 import type {
   DocumentMeta,
   PageMeta,
-} from "@silverbulletmd/silverbullet/type/index";
+} from "@alvarolm/saferbullet/type/index";
 import {
   getNameFromPath,
   parseToRef,
   type Path,
-} from "@silverbulletmd/silverbullet/lib/ref";
-import { folderName } from "@silverbulletmd/silverbullet/lib/resolve";
+} from "@alvarolm/saferbullet/lib/ref";
+import { folderName } from "@alvarolm/saferbullet/lib/resolve";
 
 const tagRegex = new RegExp(mdTagRegex.source, "g");
 

@@ -1,7 +1,7 @@
 import {
   isLocalURL,
   resolveMarkdownLink,
-} from "@silverbulletmd/silverbullet/lib/resolve";
+} from "@alvarolm/saferbullet/lib/resolve";
 import type { Client } from "../client.ts";
 import { syntaxTree } from "@codemirror/language";
 import { Decoration } from "@codemirror/view";

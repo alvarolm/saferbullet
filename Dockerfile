@@ -26,9 +26,9 @@ VOLUME /space
 # Either create a volume:
 #   docker volume create myspace
 # Then bind-mount it when running the container with the -v flag, e.g.:
-#   docker run -v myspace:/space -p3000:3000 -it ghcr.io/silverbulletmd/silverbullet
+#   docker run -v myspace:/space -p3000:3000 -it ghcr.io/alvarolm/saferbullet
 # Or simply mount an existing folder into the container:
-#   docker run -v /path/to/my/folder:/space -p3000:3000 -it ghcr.io/silverbulletmd/silverbullet
+#   docker run -v /path/to/my/folder:/space -p3000:3000 -it ghcr.io/alvarolm/saferbullet
 
 RUN apk add --no-cache git curl bash tini
 
@@ -52,5 +52,5 @@ ADD ./docker-entrypoint.sh /docker-entrypoint.sh
 COPY --from=builder /app/silverbullet /silverbullet
 
 # Run the server, allowing to pass in additional argument at run time, e.g.
-#   docker run -p 3002:3000 -v myspace:/space -it ghcr.io/silverbulletmd/silverbullet --user me:letmein
+#   docker run -p 3002:3000 -v myspace:/space -it ghcr.io/alvarolm/saferbullet --user me:letmein
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]

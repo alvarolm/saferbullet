@@ -2,7 +2,7 @@
  * Implement out of band data augmentation operations
  */
 
-import type { KvKey } from "@silverbulletmd/silverbullet/type/datastore";
+import type { KvKey } from "@alvarolm/saferbullet/type/datastore";
 import type { DataStore } from "./datastore.ts";
 
 /**

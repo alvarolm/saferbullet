@@ -5,7 +5,7 @@ import {
   markdown,
   space,
   sync,
-} from "@silverbulletmd/silverbullet/syscalls";
+} from "@alvarolm/saferbullet/syscalls";
 
 import {
   addParentPointers,
@@ -16,14 +16,14 @@ import {
   nodeAtPos,
   type ParseTree,
   renderToText,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import {
   getNameFromPath,
   getOffsetFromLineColumn,
   isMarkdownPath,
   parseToRef,
-} from "@silverbulletmd/silverbullet/lib/ref";
-import type { ClickEvent } from "@silverbulletmd/silverbullet/type/client";
+} from "@alvarolm/saferbullet/lib/ref";
+import type { ClickEvent } from "@alvarolm/saferbullet/type/client";
 
 export const completeStates = ["x", "X"];
 

@@ -1,4 +1,4 @@
-import { parseToRef } from "@silverbulletmd/silverbullet/lib/ref";
+import { parseToRef } from "@alvarolm/saferbullet/lib/ref";
 import type { Client } from "../client.ts";
 import type { EventPayLoad } from "./lua_widget.ts";
 

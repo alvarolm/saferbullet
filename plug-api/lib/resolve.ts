@@ -1,4 +1,4 @@
-import type { Path } from "@silverbulletmd/silverbullet/lib/ref";
+import type { Path } from "@alvarolm/saferbullet/lib/ref";
 
 /**
  * Determines wether a url points into the world wide web or to the local SB instance

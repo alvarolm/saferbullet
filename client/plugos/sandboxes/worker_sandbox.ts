@@ -3,7 +3,7 @@ import type { ControllerMessage, WorkerMessage } from "../protocol.ts";
 import type { Plug } from "../plug.ts";
 import { AssetBundle, type AssetJson } from "../../asset_bundle/bundle.ts";
 import type { Sandbox } from "./sandbox.ts";
-import { race, timeout } from "@silverbulletmd/silverbullet/lib/async";
+import { race, timeout } from "@alvarolm/saferbullet/lib/async";
 
 /**
  * Represents a "safe" execution environment for plug code

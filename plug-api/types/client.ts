@@ -1,4 +1,4 @@
-import type { ParseTree } from "@silverbulletmd/silverbullet/lib/tree";
+import type { ParseTree } from "@alvarolm/saferbullet/lib/tree";
 
 export type FilterOption = {
   name: string;

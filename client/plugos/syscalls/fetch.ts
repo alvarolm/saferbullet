@@ -9,7 +9,7 @@ import type { Client } from "../../client.ts";
 import {
   base64Decode,
   base64Encode,
-} from "@silverbulletmd/silverbullet/lib/crypto";
+} from "@alvarolm/saferbullet/lib/crypto";
 import { fsEndpoint } from "../../spaces/constants.ts";
 
 export function sandboxFetchSyscalls(

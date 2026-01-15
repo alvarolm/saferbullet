@@ -14,12 +14,12 @@ import {
   inlineContentFromURL,
 } from "../markdown_renderer/inline.ts";
 import { parseMarkdown } from "../markdown_parser/parser.ts";
-import { renderToText } from "@silverbulletmd/silverbullet/lib/tree";
+import { renderToText } from "@alvarolm/saferbullet/lib/tree";
 import {
   nameFromTransclusion,
   parseTransclusion,
-} from "@silverbulletmd/silverbullet/lib/transclusion";
-import { parseToRef } from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/transclusion";
+import { parseToRef } from "@alvarolm/saferbullet/lib/ref";
 
 export function inlineContentPlugin(client: Client) {
   return decoratorStateField((state: EditorState) => {

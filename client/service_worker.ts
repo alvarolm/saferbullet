@@ -10,13 +10,13 @@ import {
   deriveDbName,
   exportKey,
   importKey,
-} from "@silverbulletmd/silverbullet/lib/crypto";
+} from "@alvarolm/saferbullet/lib/crypto";
 import { IndexedDBKvPrimitives } from "./data/indexeddb_kv_primitives.ts";
 import { fsEndpoint } from "./spaces/constants.ts";
 import { DataStoreSpacePrimitives } from "./spaces/datastore_space_primitives.ts";
 import { HttpSpacePrimitives } from "./spaces/http_space_primitives.ts";
-import { throttleImmediately } from "@silverbulletmd/silverbullet/lib/async";
-import { wrongSpacePathError } from "@silverbulletmd/silverbullet/constants";
+import { throttleImmediately } from "@alvarolm/saferbullet/lib/async";
+import { wrongSpacePathError } from "@alvarolm/saferbullet/constants";
 import type { KvPrimitives } from "./data/kv_primitives.ts";
 import { EncryptedKvPrimitives } from "./data/encrypted_kv_primitives.ts";
 

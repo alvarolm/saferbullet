@@ -4,8 +4,8 @@ import {
   editor,
   index,
   system,
-} from "@silverbulletmd/silverbullet/syscalls";
-import type { FilterOption } from "@silverbulletmd/silverbullet/type/client";
+} from "@alvarolm/saferbullet/syscalls";
+import type { FilterOption } from "@alvarolm/saferbullet/type/client";
 
 // Run on "editor:init"
 export async function setEditorMode() {

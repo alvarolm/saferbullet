@@ -3,8 +3,8 @@ package main
 import (
 	_ "embed"
 
-	"github.com/silverbulletmd/silverbullet/client_bundle"
-	"github.com/silverbulletmd/silverbullet/server/cmd"
+	"github.com/alvarolm/saferbullet/client_bundle"
+	"github.com/alvarolm/saferbullet/server/cmd"
 )
 
 //go:embed public_version.ts

@@ -5,7 +5,7 @@ import type {
   FileMeta,
   PageMeta,
 } from "../../plug-api/types/index.ts";
-import type { Ref } from "@silverbulletmd/silverbullet/lib/ref";
+import type { Ref } from "@alvarolm/saferbullet/lib/ref";
 
 /**
  * Exposes the space with its pages, documents and plugs.

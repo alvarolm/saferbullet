@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/silverbulletmd/silverbullet/server"
+	"github.com/alvarolm/saferbullet/server"
 	"github.com/spf13/cobra"
 )
 

@@ -8,7 +8,7 @@ import type {
   MQStats,
   MQSubscribeOptions,
 } from "../../plug-api/types/datastore.ts";
-import { race, sleep } from "@silverbulletmd/silverbullet/lib/async";
+import { race, sleep } from "@alvarolm/saferbullet/lib/async";
 import type { EventHook } from "../plugos/hooks/event.ts";
 
 export type ProcessingMessage = MQMessage & {

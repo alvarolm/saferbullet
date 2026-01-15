@@ -1,19 +1,19 @@
-import { editor, markdown } from "@silverbulletmd/silverbullet/syscalls";
+import { editor, markdown } from "@alvarolm/saferbullet/syscalls";
 import {
   addParentPointers,
   findNodeOfType,
   findParentMatching,
   nodeAtPos,
   type ParseTree,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import {
   isLocalURL,
   resolveMarkdownLink,
-} from "@silverbulletmd/silverbullet/lib/resolve";
-import { parseToRef } from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/resolve";
+import { parseToRef } from "@alvarolm/saferbullet/lib/ref";
 import { tagPrefix } from "../index/constants.ts";
-import type { ClickEvent } from "@silverbulletmd/silverbullet/type/client";
-import { extractHashtag } from "@silverbulletmd/silverbullet/lib/tags";
+import type { ClickEvent } from "@alvarolm/saferbullet/type/client";
+import { extractHashtag } from "@alvarolm/saferbullet/lib/tags";
 
 async function actionClickOrActionEnter(
   mdTree: ParseTree | null,

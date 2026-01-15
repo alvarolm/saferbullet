@@ -1,8 +1,8 @@
 import emojiBlob from "./emoji.json" with { type: "json" };
-import { editor, system } from "@silverbulletmd/silverbullet/syscalls";
+import { editor, system } from "@alvarolm/saferbullet/syscalls";
 
 import type { EmojiConfig } from "../../plug-api/types/config.ts";
-import type { CompleteEvent } from "@silverbulletmd/silverbullet/type/client";
+import type { CompleteEvent } from "@alvarolm/saferbullet/type/client";
 
 let emojiConfig: EmojiConfig = { aliases: [] };
 

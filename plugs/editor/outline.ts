@@ -1,4 +1,4 @@
-import { editor } from "@silverbulletmd/silverbullet/syscalls";
+import { editor } from "@alvarolm/saferbullet/syscalls";
 
 export async function moveItemUp() {
   const cursorPos = await editor.getCursor();

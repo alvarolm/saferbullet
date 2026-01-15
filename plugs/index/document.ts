@@ -1,4 +1,4 @@
-import { space, system } from "@silverbulletmd/silverbullet/syscalls";
+import { space, system } from "@alvarolm/saferbullet/syscalls";
 import { indexObjects } from "./api.ts";
 import type { DocumentMeta } from "../../plug-api/types/index.ts";
 

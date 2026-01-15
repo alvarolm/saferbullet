@@ -6,19 +6,19 @@ import {
   removeParentPointers,
   renderToText,
   traverseTree,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import {
   encodePageURI,
   encodeRef,
   parseToRef,
-} from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/ref";
 import { Fragment, renderHtml, type Tag } from "./html_render.ts";
 import * as TagConstants from "../../plugs/index/constants.ts";
-import { extractHashtag } from "@silverbulletmd/silverbullet/lib/tags";
+import { extractHashtag } from "@alvarolm/saferbullet/lib/tags";
 import { justifiedTableRender } from "./justified_tables.ts";
-import type { PageMeta } from "@silverbulletmd/silverbullet/type/index";
+import type { PageMeta } from "@alvarolm/saferbullet/type/index";
 import { inlineContentFromURL } from "./inline.ts";
-import { parseTransclusion } from "@silverbulletmd/silverbullet/lib/transclusion";
+import { parseTransclusion } from "@alvarolm/saferbullet/lib/transclusion";
 
 export type MarkdownRenderOptions = {
   failOnUnknown?: true;

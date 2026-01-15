@@ -5,7 +5,7 @@ import {
   parseToRef,
   type Path,
   type Ref,
-} from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/ref";
 import type { Client } from "./client.ts";
 
 // The path of a location state should not be empty, rather it should be

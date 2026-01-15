@@ -14,7 +14,7 @@ import { frontmatterPlugin } from "./frontmatter.ts";
 import { cleanEscapePlugin } from "./escapes.ts";
 import { luaDirectivePlugin } from "./lua_directive.ts";
 import { hashtagPlugin } from "./hashtag.ts";
-import type { ClickEvent } from "@silverbulletmd/silverbullet/type/client";
+import type { ClickEvent } from "@alvarolm/saferbullet/type/client";
 import { attributePlugin } from "./attribute.ts";
 
 export function cleanModePlugins(client: Client) {

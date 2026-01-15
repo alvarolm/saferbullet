@@ -2,7 +2,7 @@ import {
   editor,
   markdown,
   system,
-} from "@silverbulletmd/silverbullet/syscalls";
+} from "@alvarolm/saferbullet/syscalls";
 
 export async function parsePageCommand() {
   console.log(

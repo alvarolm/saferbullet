@@ -1,5 +1,5 @@
-import { config } from "@silverbulletmd/silverbullet/syscalls";
-import type { CompleteEvent } from "@silverbulletmd/silverbullet/type/client";
+import { config } from "@alvarolm/saferbullet/syscalls";
+import type { CompleteEvent } from "@alvarolm/saferbullet/type/client";
 
 export async function completeTaskState(completeEvent: CompleteEvent) {
   const taskMatch = /([\-\*]\s+\[)([^\[\]]+)$/.exec(

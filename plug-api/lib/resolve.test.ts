@@ -1,4 +1,4 @@
-import { resolveMarkdownLink } from "@silverbulletmd/silverbullet/lib/resolve";
+import { resolveMarkdownLink } from "@alvarolm/saferbullet/lib/resolve";
 import { assertEquals } from "@std/assert";
 
 Deno.test("Test URL resolver", () => {

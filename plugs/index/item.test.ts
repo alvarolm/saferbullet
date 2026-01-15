@@ -3,7 +3,7 @@ import { indexItems } from "./item.ts";
 import { assertEquals } from "@std/assert";
 import { createMockSystem } from "../../plug-api/system_mock.ts";
 import { extractFrontMatter } from "./frontmatter.ts";
-import type { PageMeta } from "@silverbulletmd/silverbullet/type/index";
+import type { PageMeta } from "@alvarolm/saferbullet/type/index";
 
 const itemsMd = `
 * Item 1 #tag1 #tag2 [age: 100]

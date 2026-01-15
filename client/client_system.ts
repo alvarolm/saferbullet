@@ -1,5 +1,5 @@
 import { PlugNamespaceHook } from "./plugos/hooks/plug_namespace.ts";
-import type { SilverBulletHooks } from "@silverbulletmd/silverbullet/type/manifest";
+import type { SilverBulletHooks } from "@alvarolm/saferbullet/type/manifest";
 import type { EventHook } from "./plugos/hooks/event.ts";
 import { createWorkerSandboxFromLocalPath } from "./plugos/sandboxes/web_worker_sandbox.ts";
 

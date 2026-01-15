@@ -2,7 +2,7 @@ import { syntaxTree } from "@codemirror/language";
 import { Decoration } from "@codemirror/view";
 import type { Client } from "../client.ts";
 import { decoratorStateField } from "./util.ts";
-import type { ClickEvent } from "@silverbulletmd/silverbullet/type/client";
+import type { ClickEvent } from "@alvarolm/saferbullet/type/client";
 import { wikiLinkRegex } from "../markdown_parser/constants.ts";
 import { processWikiLink, type WikiLinkMatch } from "./wiki_link_processor.ts";
 

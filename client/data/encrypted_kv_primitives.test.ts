@@ -1,7 +1,7 @@
 import { assert, assertEquals } from "@std/assert";
 import { EncryptedKvPrimitives } from "./encrypted_kv_primitives.ts";
 import { MemoryKvPrimitives } from "./memory_kv_primitives.ts";
-import { deriveCTRKeyFromPassword } from "@silverbulletmd/silverbullet/lib/crypto";
+import { deriveCTRKeyFromPassword } from "@alvarolm/saferbullet/lib/crypto";
 
 Deno.test("Test Encrypted KV Primitives", async () => {
   const memoryKv = new MemoryKvPrimitives();

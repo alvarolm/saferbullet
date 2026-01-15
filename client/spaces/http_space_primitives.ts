@@ -1,16 +1,16 @@
 import type { SpacePrimitives } from "./space_primitives.ts";
-import { encodePageURI } from "@silverbulletmd/silverbullet/lib/ref";
+import { encodePageURI } from "@alvarolm/saferbullet/lib/ref";
 import {
   flushCachesAndUnregisterServiceWorker,
 } from "../../client/service_worker/util.ts";
-import type { FileMeta } from "@silverbulletmd/silverbullet/type/index";
+import type { FileMeta } from "@alvarolm/saferbullet/type/index";
 import {
   notFoundError,
   offlineError,
   offlineStatusCodes,
   pingTimeout,
   wrongSpacePathError,
-} from "@silverbulletmd/silverbullet/constants";
+} from "@alvarolm/saferbullet/constants";
 import { headersToFileMeta } from "../lib/util.ts";
 
 const defaultFetchTimeout = 30000; // 30 seconds

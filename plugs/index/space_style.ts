@@ -2,11 +2,11 @@ import {
   collectNodesOfType,
   findNodeOfType,
   type ParseTree,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import type {
   ObjectValue,
   PageMeta,
-} from "@silverbulletmd/silverbullet/type/index";
+} from "@alvarolm/saferbullet/type/index";
 import type { FrontMatter } from "./frontmatter.ts";
 
 export type StyleObject = ObjectValue<{

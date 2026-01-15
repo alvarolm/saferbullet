@@ -1,4 +1,4 @@
-import { editor } from "@silverbulletmd/silverbullet/syscalls";
+import { editor } from "@alvarolm/saferbullet/syscalls";
 import { publicVersion } from "../../public_version.ts";
 
 export async function versionCommand() {

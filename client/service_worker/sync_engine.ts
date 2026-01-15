@@ -1,5 +1,5 @@
 import { compile as gitIgnoreCompiler } from "gitignore-parser";
-import { jitter, sleep } from "@silverbulletmd/silverbullet/lib/async";
+import { jitter, sleep } from "@alvarolm/saferbullet/lib/async";
 import type { KvPrimitives } from "../data/kv_primitives.ts";
 import { EventEmitter } from "../plugos/event.ts";
 import { stdLibPrefix } from "../spaces/constants.ts";

@@ -5,10 +5,10 @@ import {
   mq,
   space,
   system,
-} from "@silverbulletmd/silverbullet/syscalls";
-import { sleep } from "@silverbulletmd/silverbullet/lib/async";
-import type { MQMessage } from "@silverbulletmd/silverbullet/type/datastore";
-import type { IndexTreeEvent } from "@silverbulletmd/silverbullet/type/event";
+} from "@alvarolm/saferbullet/syscalls";
+import { sleep } from "@alvarolm/saferbullet/lib/async";
+import type { MQMessage } from "@alvarolm/saferbullet/type/datastore";
+import type { IndexTreeEvent } from "@alvarolm/saferbullet/type/event";
 
 const uiUpdateInterval = 5000;
 

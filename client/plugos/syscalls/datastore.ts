@@ -13,7 +13,7 @@ import {
 import type { KvQueryOptions } from "../../data/kv_primitives.ts";
 import type { ClientSystem } from "../../client_system.ts";
 
-import type { KV, KvKey } from "@silverbulletmd/silverbullet/type/datastore";
+import type { KV, KvKey } from "@alvarolm/saferbullet/type/datastore";
 
 /**
  * Exposes the datastore API to plugs, but scoping everything to a prefix based on the plug's name

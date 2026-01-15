@@ -1,7 +1,7 @@
 import type { EventHook } from "../plugos/hooks/event.ts";
 
 import type { SpacePrimitives } from "./space_primitives.ts";
-import type { FileMeta } from "@silverbulletmd/silverbullet/type/index";
+import type { FileMeta } from "@alvarolm/saferbullet/type/index";
 import type { DataStore } from "../data/datastore.ts";
 
 /**

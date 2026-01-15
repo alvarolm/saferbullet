@@ -1,7 +1,7 @@
 import {
   findNodeOfType,
   traverseTree,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import { parseMarkdown } from "./markdown_parser/parser.ts";
 import { System } from "./plugos/system.ts";
 import { configSyscalls } from "./plugos/syscalls/config.ts";

@@ -3,23 +3,23 @@ import {
   lua,
   markdown,
   space,
-} from "@silverbulletmd/silverbullet/syscalls";
+} from "@alvarolm/saferbullet/syscalls";
 import { getBackLinks, type LinkObject } from "./link.ts";
 import {
   absoluteToRelativePath,
   folderName,
-} from "@silverbulletmd/silverbullet/lib/resolve";
-import type { ParseTree } from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/resolve";
+import type { ParseTree } from "@alvarolm/saferbullet/lib/tree";
 import {
   addParentPointers,
   findNodeOfType,
   findParentMatching,
   nodeAtPos,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import { queryLuaObjects } from "./api.ts";
-import type { ObjectValue } from "@silverbulletmd/silverbullet/type/index";
-import { isValidPath } from "@silverbulletmd/silverbullet/lib/ref";
-import { notFoundError } from "@silverbulletmd/silverbullet/constants";
+import type { ObjectValue } from "@alvarolm/saferbullet/type/index";
+import { isValidPath } from "@alvarolm/saferbullet/lib/ref";
+import { notFoundError } from "@alvarolm/saferbullet/constants";
 
 /**
  * Renames a single page.

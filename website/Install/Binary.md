@@ -5,7 +5,7 @@ SilverBullet is distributed as a single server binary available for the followin
 * Windows (64-bit)
 
 Steps:
-1. [Download the binary for your platform from Github](https://github.com/silverbulletmd/silverbullet/releases).
+1. [Download the binary for your platform from Github](https://github.com/alvarolm/saferbullet/releases).
 2. Unzip the file in a convenient place
 3. Run it from the command line (see below)
 

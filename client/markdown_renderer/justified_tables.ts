@@ -1,4 +1,4 @@
-import type { ParseTree } from "@silverbulletmd/silverbullet/lib/tree";
+import type { ParseTree } from "@alvarolm/saferbullet/lib/tree";
 import type { Tag } from "./html_render.ts";
 
 /** How to justify a table's row's cells */

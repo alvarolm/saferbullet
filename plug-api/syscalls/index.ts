@@ -1,5 +1,5 @@
 import type { LuaCollectionQuery } from "../../client/space_lua/query_collection.ts";
-import { syscall } from "@silverbulletmd/silverbullet/syscall";
+import { syscall } from "@alvarolm/saferbullet/syscall";
 import type { ObjectValue } from "../../plug-api/types/index.ts";
 
 /**

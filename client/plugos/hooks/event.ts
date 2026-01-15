@@ -2,7 +2,7 @@
 import type { Manifest } from "../types.ts";
 import type { System } from "../system.ts";
 import type { EventHookI } from "../eventhook.ts";
-import type { EventHookT } from "@silverbulletmd/silverbullet/type/manifest";
+import type { EventHookT } from "@alvarolm/saferbullet/type/manifest";
 import type { Config } from "../../config.ts";
 
 // System events:

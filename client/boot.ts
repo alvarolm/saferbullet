@@ -1,9 +1,9 @@
-import { race, safeRun, sleep } from "@silverbulletmd/silverbullet/lib/async";
+import { race, safeRun, sleep } from "@alvarolm/saferbullet/lib/async";
 import {
   notAuthenticatedError,
   offlineError,
   offlineStatusCodes,
-} from "@silverbulletmd/silverbullet/constants";
+} from "@alvarolm/saferbullet/constants";
 import { initLogger } from "./lib/logger.ts";
 import { extractSpaceLuaFromPageText, loadConfig } from "./boot_config.ts";
 import { Client } from "./client.ts";
@@ -15,7 +15,7 @@ import {
 import "./lib/polyfills.ts";
 import type { BootConfig, ServiceWorkerTargetMessage } from "./types/ui.ts";
 import { BoxProxy } from "./lib/box_proxy.ts";
-import { importKey } from "@silverbulletmd/silverbullet/lib/crypto";
+import { importKey } from "@alvarolm/saferbullet/lib/crypto";
 import "./debug.ts";
 const logger = initLogger("[Client]");
 

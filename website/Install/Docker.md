@@ -1,6 +1,6 @@
 [Docker](https://www.docker.com/) is a convenient and secure way to install server applications either locally or on a server you control. If you don’t have docker already running on your machine and are macOS user, consider giving [OrbStack](https://orbstack.dev/) a try — it’s a super nice docker experience.
 
-Conveniently, SilverBullet is published as a [docker image on GHCR](https://github.com/silverbulletmd/silverbullet/pkgs/container/silverbullet). The image comes in two flavors:
+Conveniently, SilverBullet is published as a [docker image on GHCR](https://github.com/alvarolm/saferbullet/pkgs/container/saferbullet). The image comes in two flavors:
 
 * 64-bit Intel
 * 64-bit ARM (e.g. for Raspberry Pis and Apple Silicon macs)
@@ -24,7 +24,7 @@ Every release version of SilverBullet is tagged with its version number, but the
 * The Docker image is based on [Alpine](https://alpinelinux.org/). If you'd like to install additional packages into it, see [[#Installing additional packages]] below.
 
 > **note** Note
-> The same docker images are both available from [GHCR](https://github.com/silverbulletmd/silverbullet/pkgs/container/silverbullet) and [Docker Hub](https://hub.docker.com/r/zefhemel/silverbullet), use whichever you prefer.
+> The same docker images are both available from [GHCR](https://github.com/alvarolm/saferbullet/pkgs/container/saferbullet) and [Docker Hub](https://hub.docker.com/r/zefhemel/silverbullet), use whichever you prefer.
 
 ## Versions
 To check the version you’re running, use the ${widgets.commandButton("Client: Version")} command. Note that after an upgrade you may have to reload your (browser) client **twice**, to fully activate the new version.
@@ -41,7 +41,7 @@ Instructions:
 ```yaml
 services:
   silverbullet:
-    image: ghcr.io/silverbulletmd/silverbullet:latest
+    image: ghcr.io/alvarolm/saferbullet:latest
     restart: unless-stopped
     environment:
     - SB_USER=admin:password
@@ -83,7 +83,7 @@ docker run -it --rm -p 3000:3000 \
   --name silverbullet \
   -v ./space:/space \
   -e SB_USER=user:password \
-  ghcr.io/silverbulletmd/silverbullet:latest
+  ghcr.io/alvarolm/saferbullet:latest
 ```
 
 This will run SilverBullet in the foreground, interactively, so you can see the logs and instructions. Replace `user` and `password` with something more sensible.
@@ -98,7 +98,7 @@ docker run -d --restart unless-stopped \
   -p 3000:3000 \
   -v ./space:/space \
   -e SB_USER=user:password \
-  ghcr.io/silverbulletmd/silverbullet:latest
+  ghcr.io/alvarolm/saferbullet:latest
 ```
 
 There you go!
@@ -107,7 +107,7 @@ There you go!
 To upgrade your version of SilverBullet, first pull the new image:
 
 ```shell
-docker pull ghcr.io/silverbulletmd/silverbullet:latest
+docker pull ghcr.io/alvarolm/saferbullet:latest
 # Then stop the current container
 docker stop silverbullet
 # Remove the existing container

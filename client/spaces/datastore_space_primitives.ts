@@ -1,7 +1,7 @@
 import type { SpacePrimitives } from "./space_primitives.ts";
 import { mime } from "mimetypes";
-import type { FileMeta } from "@silverbulletmd/silverbullet/type/index";
-import { notFoundError } from "@silverbulletmd/silverbullet/constants";
+import type { FileMeta } from "@alvarolm/saferbullet/type/index";
+import { notFoundError } from "@alvarolm/saferbullet/constants";
 import type { KvPrimitives } from "../data/kv_primitives.ts";
 
 const filesMetaPrefix = ["meta"];

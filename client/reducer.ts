@@ -3,7 +3,7 @@ import type { PageMeta } from "../plug-api/types/index.ts";
 import {
   isMarkdownPath,
   parseToRef,
-} from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/ref";
 
 export default function reducer(
   state: AppViewState,

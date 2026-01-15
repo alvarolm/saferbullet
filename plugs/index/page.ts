@@ -1,4 +1,4 @@
-import { editor, lua, markdown } from "@silverbulletmd/silverbullet/syscalls";
+import { editor, lua, markdown } from "@alvarolm/saferbullet/syscalls";
 
 import type { FrontMatter } from "./frontmatter.ts";
 import { deleteObject, getObjectByRef, queryLuaObjects } from "./api.ts";
@@ -7,11 +7,11 @@ import {
   type ParseTree,
   renderToText,
   traverseTreeAsync,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import { updateITags } from "./tags.ts";
 import type { AspiringPageObject } from "./link.ts";
-import type { PageMeta } from "@silverbulletmd/silverbullet/type/index";
-import type { LintDiagnostic } from "@silverbulletmd/silverbullet/type/client";
+import type { PageMeta } from "@alvarolm/saferbullet/type/index";
+import type { LintDiagnostic } from "@alvarolm/saferbullet/type/client";
 
 import YAML from "js-yaml";
 

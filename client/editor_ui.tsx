@@ -17,8 +17,8 @@ import { closeSearchPanel } from "@codemirror/search";
 import { runScopeHandlers } from "@codemirror/view";
 import type { Client } from "./client.ts";
 import { Panel } from "./components/panel.tsx";
-import { safeRun } from "@silverbulletmd/silverbullet/lib/async";
-import type { FilterOption } from "@silverbulletmd/silverbullet/type/client";
+import { safeRun } from "@alvarolm/saferbullet/lib/async";
+import type { FilterOption } from "@alvarolm/saferbullet/type/client";
 import {
   getNameFromPath,
   getPathExtension,
@@ -26,7 +26,7 @@ import {
   isValidName,
   parseToRef,
   type Path,
-} from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/ref";
 
 export class MainUI {
   viewState: AppViewState = initialViewState;

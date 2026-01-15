@@ -1,14 +1,14 @@
-import { editor, space, system } from "@silverbulletmd/silverbullet/syscalls";
+import { editor, space, system } from "@alvarolm/saferbullet/syscalls";
 import {
   defaultLinkStyle,
   maximumDocumentSize,
-} from "@silverbulletmd/silverbullet/constants";
-import { resolveMarkdownLink } from "@silverbulletmd/silverbullet/lib/resolve";
+} from "@alvarolm/saferbullet/constants";
+import { resolveMarkdownLink } from "@alvarolm/saferbullet/lib/resolve";
 import {
   encodePageURI,
   isValidPath,
-} from "@silverbulletmd/silverbullet/lib/ref";
-import type { UploadFile } from "@silverbulletmd/silverbullet/type/client";
+} from "@alvarolm/saferbullet/lib/ref";
+import type { UploadFile } from "@alvarolm/saferbullet/type/client";
 
 export async function saveFile(file: UploadFile) {
   const maxSize = await system.getConfig<number>(

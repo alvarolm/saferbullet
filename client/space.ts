@@ -1,18 +1,18 @@
 import type { EventHook } from "./plugos/hooks/event.ts";
-import { jitter, safeRun } from "@silverbulletmd/silverbullet/lib/async";
-import { localDateString } from "@silverbulletmd/silverbullet/lib/dates";
+import { jitter, safeRun } from "@alvarolm/saferbullet/lib/async";
+import { localDateString } from "@alvarolm/saferbullet/lib/dates";
 import type {
   DocumentMeta,
   FileMeta,
   PageMeta,
-} from "@silverbulletmd/silverbullet/type/index";
+} from "@alvarolm/saferbullet/type/index";
 import type { SpacePrimitives } from "./spaces/space_primitives.ts";
 import {
   getOffsetFromLineColumn,
   getPathExtension,
   type Path,
   type Ref,
-} from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/ref";
 import { parseMarkdown } from "./markdown_parser/parser.ts";
 import {
   addParentPointers,
@@ -20,7 +20,7 @@ import {
   nodeAtPos,
   renderToText,
   traverseTree,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 
 const pageWatchInterval = 3000; // + jitter
 

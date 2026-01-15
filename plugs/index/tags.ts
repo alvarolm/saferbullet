@@ -6,14 +6,14 @@ import {
   type ParseTree,
   replaceNodesMatching,
   traverseTree,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import type {
   ObjectValue,
   PageMeta,
-} from "@silverbulletmd/silverbullet/type/index";
-import type { CompleteEvent } from "@silverbulletmd/silverbullet/type/client";
+} from "@alvarolm/saferbullet/type/index";
+import type { CompleteEvent } from "@alvarolm/saferbullet/type/client";
 import { tagRegex } from "../../client/markdown_parser/constants.ts";
-import { extractHashtag } from "@silverbulletmd/silverbullet/lib/tags";
+import { extractHashtag } from "@alvarolm/saferbullet/lib/tags";
 
 export type TagObject = ObjectValue<{
   name: string;

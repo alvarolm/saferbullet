@@ -3,7 +3,7 @@ import { Decoration } from "@codemirror/view";
 import { decoratorStateField } from "./util.ts";
 import * as Constants from "../../plugs/index/constants.ts";
 import { extractHashtag } from "../../plug-api/lib/tags.ts";
-import { encodePageURI } from "@silverbulletmd/silverbullet/lib/ref";
+import { encodePageURI } from "@alvarolm/saferbullet/lib/ref";
 
 export function hashtagPlugin() {
   return decoratorStateField((state) => {

@@ -1,13 +1,13 @@
 // deno-lint-ignore-file ban-types
 import type { Hook, Manifest } from "../types.ts";
 import type { System } from "../system.ts";
-import { throttle } from "@silverbulletmd/silverbullet/lib/async";
-import type { MQHookT } from "@silverbulletmd/silverbullet/type/manifest";
+import { throttle } from "@alvarolm/saferbullet/lib/async";
+import type { MQHookT } from "@alvarolm/saferbullet/type/manifest";
 import type { DataStoreMQ, QueueWorker } from "../../data/mq.datastore.ts";
 import type {
   MQMessage,
   MQSubscribeOptions,
-} from "@silverbulletmd/silverbullet/type/datastore";
+} from "@alvarolm/saferbullet/type/datastore";
 import type { Config } from "../../config.ts";
 
 export type MQListenerSpec =

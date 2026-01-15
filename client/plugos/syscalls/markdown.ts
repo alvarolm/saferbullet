@@ -3,7 +3,7 @@ import { parse } from "../../markdown_parser/parse_tree.ts";
 import {
   type ParseTree,
   renderToText,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import { extendedMarkdownLanguage } from "../../markdown_parser/parser.ts";
 import {
   expandMarkdown,

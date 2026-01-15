@@ -1,7 +1,7 @@
 import type { KvPrimitives, KvQueryOptions } from "./kv_primitives.ts";
-import { throttle } from "@silverbulletmd/silverbullet/lib/async";
+import { throttle } from "@alvarolm/saferbullet/lib/async";
 
-import type { KV, KvKey } from "@silverbulletmd/silverbullet/type/datastore";
+import type { KV, KvKey } from "@alvarolm/saferbullet/type/datastore";
 
 const memoryKeySeparator = "\0";
 

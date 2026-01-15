@@ -1,9 +1,9 @@
 import type { Hook, Manifest } from "../types.ts";
 import type { System } from "../system.ts";
 import { EventEmitter } from "../event.ts";
-import { throttle } from "@silverbulletmd/silverbullet/lib/async";
+import { throttle } from "@alvarolm/saferbullet/lib/async";
 import type { Command, CommandHookEvents } from "../../types/command.ts";
-import type { CommandHookT } from "@silverbulletmd/silverbullet/type/manifest";
+import type { CommandHookT } from "@alvarolm/saferbullet/type/manifest";
 
 export class CommandHook extends EventEmitter<CommandHookEvents>
   implements Hook<CommandHookT> {

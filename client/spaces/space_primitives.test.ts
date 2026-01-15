@@ -1,7 +1,7 @@
 import { assert, assertEquals } from "@std/assert";
 import type { SpacePrimitives } from "./space_primitives.ts";
-import type { FileMeta } from "@silverbulletmd/silverbullet/type/index";
-import { notFoundError } from "@silverbulletmd/silverbullet/constants";
+import type { FileMeta } from "@alvarolm/saferbullet/type/index";
+import { notFoundError } from "@alvarolm/saferbullet/constants";
 
 export async function testSpacePrimitives(spacePrimitives: SpacePrimitives) {
   await testBasicOperations(spacePrimitives);

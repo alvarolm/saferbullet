@@ -3,14 +3,14 @@ import {
   collectNodesOfType,
   findNodeOfType,
   type ParseTree,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import type { TagObject } from "./tags.ts";
 import type { FrontMatter } from "./frontmatter.ts";
 import { updateITags } from "./tags.ts";
 import type {
   ObjectValue,
   PageMeta,
-} from "@silverbulletmd/silverbullet/type/index";
+} from "@alvarolm/saferbullet/type/index";
 
 type DataObject = ObjectValue<
   {

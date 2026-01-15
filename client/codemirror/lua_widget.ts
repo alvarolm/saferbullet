@@ -4,10 +4,10 @@ import { renderMarkdownToHtml } from "../markdown_renderer/markdown_render.ts";
 import {
   isLocalURL,
   resolveMarkdownLink,
-} from "@silverbulletmd/silverbullet/lib/resolve";
+} from "@alvarolm/saferbullet/lib/resolve";
 import { parse } from "../markdown_parser/parse_tree.ts";
 import { extendedMarkdownLanguage } from "../markdown_parser/parser.ts";
-import { renderToText } from "@silverbulletmd/silverbullet/lib/tree";
+import { renderToText } from "@alvarolm/saferbullet/lib/tree";
 import {
   attachWidgetEventHandlers,
   moveCursorIntoText,
@@ -20,7 +20,7 @@ import {
   refCellTransformer,
 } from "../markdown_renderer/result_render.ts";
 import { activeWidgets } from "./code_widget.ts";
-import type { Ref } from "@silverbulletmd/silverbullet/lib/ref";
+import type { Ref } from "@alvarolm/saferbullet/lib/ref";
 
 export type LuaWidgetCallback = (
   bodyText: string,

@@ -2,7 +2,7 @@ import type { Plug } from "../plug.ts";
 import type { Sandbox, SandboxFactory } from "./sandbox.ts";
 import type { Manifest } from "../types.ts";
 import type { System } from "../system.ts";
-import { PromiseQueue } from "@silverbulletmd/silverbullet/lib/async";
+import { PromiseQueue } from "@alvarolm/saferbullet/lib/async";
 
 /**
  * This implements a "no sandbox" sandbox that actually runs code the main thread, without any isolation.

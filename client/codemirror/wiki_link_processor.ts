@@ -4,13 +4,13 @@ import type { Client } from "../client.ts";
 import {
   fileName,
   isBuiltinPath,
-} from "@silverbulletmd/silverbullet/lib/resolve";
+} from "@alvarolm/saferbullet/lib/resolve";
 import {
   encodePageURI,
   encodeRef,
   getNameFromPath,
   parseToRef,
-} from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/ref";
 import { isCursorInRange, LinkWidget } from "./util.ts";
 
 export interface WikiLinkMatch {

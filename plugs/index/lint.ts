@@ -1,14 +1,14 @@
-import { lua } from "@silverbulletmd/silverbullet/syscalls";
+import { lua } from "@alvarolm/saferbullet/syscalls";
 import {
   findNodeOfType,
   renderToText,
   traverseTree,
   traverseTreeAsync,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import type {
   LintDiagnostic,
   LintEvent,
-} from "@silverbulletmd/silverbullet/type/client";
+} from "@alvarolm/saferbullet/type/client";
 
 import YAML from "js-yaml";
 

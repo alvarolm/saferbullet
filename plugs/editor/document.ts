@@ -1,4 +1,4 @@
-import { editor, space } from "@silverbulletmd/silverbullet/syscalls";
+import { editor, space } from "@alvarolm/saferbullet/syscalls";
 
 export async function deleteDocument() {
   const documentName = await editor.getCurrentPath();

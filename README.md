@@ -2,9 +2,9 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/alvarolm/saferbullet/total)
 
 > [!CAUTION]
-> - This software has not been actively tested. It may contain unexpected behaviors
 > - Contributions, opinions or feedback of any kind are more than welcome and greatly appreciated!
 > - Mind there is NO GUARANTEE WHATSOEVER for this software, use at your own risk.
+> - This software has not been actively tested. It may contain unexpected behaviors
 
 References:
 - [SilverBullet](https://github.com/silverbulletmd/silverbullet)
@@ -12,7 +12,7 @@ References:
 
 # SaferBullet
 
-This is a fork of SilverBullet focused on improving security, is 100% compatible with SilverBullet and can be used as a drop-in replacement.
+This is a fork of SilverBullet focused on improving security, its 100% compatible with SilverBullet and can be used as a drop-in replacement.
 
 I will try to keep it updated with the latest version of SilverBullet.
 
@@ -20,19 +20,19 @@ I'm also evaluating the possibility of a "ready to deploy" binary that includes 
 
 ## Improvements
 
-- regular checks for vulnerabilities in dependencies [WIP]
-- updated dependencies [TODO]
-- saner defaults [TODO]
-- elimination of unverified remote code loading [WIP]  
+- [WIP] regular checks for vulnerabilities in dependencies
+- [TODO] updated dependencies
+- [TODO] saner defaults
+- [WIP] elimination of unverified remote code loading
 - plugin security:
-  - signing and verification of packaged plugins [DONE]
-  - disable minification to ensure compiled code remains human-readable and auditable of packaged plugins [DONE]
+  - [DONE] signing and verification of packaged plugins
+  - [DONE] disable minification to ensure compiled code remains human-readable and auditable of packaged plugins
 - server security:
-  - file system encryption [EVALUATING]
-  - automatic tls encryption and authentication [EVALUATING]
-  - external communication protection, proxy api (domain whitelisting) [TODO]
+  - [EVALUATING] file system encryption
+  - [EVALUATING] automatic tls encryption and authentication
+  - [TODO] proxy api request filtering (domain whitelisting)
 
-see [saferbullet-changelog.md][saferbullet-changelog.md] for the current implementation status
+see [saferbullet-changelog.md](./saferbullet-changelog.md) for the current implementation status
 
 ## LICENSE
 MIT

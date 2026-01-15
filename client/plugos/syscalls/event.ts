@@ -1,6 +1,6 @@
 import type { SysCallMapping } from "../system.ts";
 import type { EventHookI } from "../eventhook.ts";
-import type { EventSubscription } from "@silverbulletmd/silverbullet/type/event";
+import type { EventSubscription } from "@alvarolm/saferbullet/type/event";
 import { LuaStackFrame, luaValueToJS } from "../../space_lua/runtime.ts";
 import type { Client } from "../../client.ts";
 

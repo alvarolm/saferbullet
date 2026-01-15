@@ -1,12 +1,12 @@
 import { fsEndpoint } from "../spaces/constants.ts";
-import { decodePageURI } from "@silverbulletmd/silverbullet/lib/ref";
+import { decodePageURI } from "@alvarolm/saferbullet/lib/ref";
 import type { SpacePrimitives } from "../spaces/space_primitives.ts";
 import { fileMetaToHeaders, headersToFileMeta } from "../lib/util.ts";
 import {
   notFoundError,
   offlineError,
   pingInterval,
-} from "@silverbulletmd/silverbullet/constants";
+} from "@alvarolm/saferbullet/constants";
 import type { SyncEngine } from "./sync_engine.ts";
 import { EventEmitter } from "../plugos/event.ts";
 

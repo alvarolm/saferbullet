@@ -14,7 +14,7 @@ import { TaskList } from "./extended_task.ts";
 import { Table } from "./table_parser.ts";
 import { nakedUrlRegex, pWikiLinkRegex, tagRegex } from "./constants.ts";
 import { parse } from "./parse_tree.ts";
-import type { ParseTree } from "@silverbulletmd/silverbullet/lib/tree";
+import type { ParseTree } from "@alvarolm/saferbullet/lib/tree";
 import { luaLanguage } from "../space_lua/parse.ts";
 
 const WikiLink: MarkdownConfig = {

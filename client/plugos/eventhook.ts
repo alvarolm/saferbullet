@@ -1,4 +1,4 @@
-import type { EventHookT } from "@silverbulletmd/silverbullet/type/manifest";
+import type { EventHookT } from "@alvarolm/saferbullet/type/manifest";
 import type { Hook } from "./types.ts";
 
 export interface EventHookI extends Hook<EventHookT> {

@@ -5,7 +5,7 @@ import {
   deriveGCMKeyFromCTR,
   encryptAesGcm,
   encryptStringDeterministic,
-} from "@silverbulletmd/silverbullet/lib/crypto";
+} from "@alvarolm/saferbullet/lib/crypto";
 import { assertEquals } from "@std/assert";
 
 Deno.test("Crypto test", async () => {

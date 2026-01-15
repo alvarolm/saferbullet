@@ -47,10 +47,10 @@ import { postScriptPrefacePlugin } from "./top_bottom_panels.ts";
 import { languageFor } from "../languages.ts";
 import { plugLinter } from "./lint.ts";
 import { extendedMarkdownLanguage } from "../markdown_parser/parser.ts";
-import { safeRun } from "@silverbulletmd/silverbullet/lib/async";
+import { safeRun } from "@alvarolm/saferbullet/lib/async";
 import { codeCopyPlugin } from "../codemirror/code_copy.ts";
 import { disableSpellcheck } from "../codemirror/spell_checking.ts";
-import type { ClickEvent } from "@silverbulletmd/silverbullet/type/client";
+import type { ClickEvent } from "@alvarolm/saferbullet/type/client";
 
 export function createEditorState(
   client: Client,

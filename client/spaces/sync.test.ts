@@ -1,6 +1,6 @@
 import { SpaceSync, SyncSnapshot } from "./sync.ts";
 import { assertEquals } from "@std/assert";
-import { sleep } from "@silverbulletmd/silverbullet/lib/async";
+import { sleep } from "@alvarolm/saferbullet/lib/async";
 import { assert } from "node:console";
 import { MemoryKvPrimitives } from "../data/memory_kv_primitives.ts";
 import { DataStoreSpacePrimitives } from "./datastore_space_primitives.ts";

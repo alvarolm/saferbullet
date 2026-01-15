@@ -3,7 +3,7 @@ import {
   findNodeOfType,
   type ParseTree,
   renderToText,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 
 /**
  * Represents a path with an extension. This is a little cursed, but enforces

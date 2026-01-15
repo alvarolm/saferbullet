@@ -1,7 +1,7 @@
 import {
   isLocalURL,
   resolveMarkdownLink,
-} from "@silverbulletmd/silverbullet/lib/resolve";
+} from "@alvarolm/saferbullet/lib/resolve";
 import {
   mdLinkRegex,
   wikiLinkRegex,
@@ -9,7 +9,7 @@ import {
 import {
   getNameFromPath,
   parseToRef,
-} from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/ref";
 
 export type LinkType = "wikilink" | "markdownlink";
 /**

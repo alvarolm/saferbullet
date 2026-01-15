@@ -1,4 +1,4 @@
-import type { Manifest } from "@silverbulletmd/silverbullet/type/manifest";
+import type { Manifest } from "@alvarolm/saferbullet/type/manifest";
 
 // Messages received from the worker
 export type ControllerMessage =

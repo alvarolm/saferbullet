@@ -1,10 +1,10 @@
 import type {
   ObjectValue,
   PageMeta,
-} from "@silverbulletmd/silverbullet/type/index";
+} from "@alvarolm/saferbullet/type/index";
 import { extractFrontMatter, type FrontMatter } from "./frontmatter.ts";
-import type { ParseTree } from "@silverbulletmd/silverbullet/lib/tree";
-import type { IndexTreeEvent } from "@silverbulletmd/silverbullet/type/event";
+import type { ParseTree } from "@alvarolm/saferbullet/lib/tree";
+import type { IndexTreeEvent } from "@alvarolm/saferbullet/type/event";
 import { indexObjects } from "./api.ts";
 import { indexPage as pageIndexPage } from "./page.ts";
 import { indexData } from "./data.ts";
@@ -16,7 +16,7 @@ import { indexTables } from "./table.ts";
 import { indexSpaceLua } from "./space_lua.ts";
 import { indexSpaceStyle } from "./space_style.ts";
 import { indexTags } from "./tags.ts";
-import { markdown } from "@silverbulletmd/silverbullet/syscalls";
+import { markdown } from "@alvarolm/saferbullet/syscalls";
 
 export type IndexerFunction = (
   pageMeta: PageMeta,

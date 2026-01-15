@@ -1,9 +1,9 @@
 import type {
   CommandDef,
   SlashCommandDef,
-} from "@silverbulletmd/silverbullet/type/manifest";
+} from "@alvarolm/saferbullet/type/manifest";
 
-import type { SlashCompletions } from "@silverbulletmd/silverbullet/type/client";
+import type { SlashCompletions } from "@alvarolm/saferbullet/type/client";
 
 export type Command = CommandDef & {
   run?: (args?: any[]) => Promise<any>;

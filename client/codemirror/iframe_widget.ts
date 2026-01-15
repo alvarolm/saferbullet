@@ -4,7 +4,7 @@ import { createWidgetSandboxIFrame } from "../components/widget_sandbox_iframe.t
 import type {
   CodeWidgetCallback,
   CodeWidgetContent,
-} from "@silverbulletmd/silverbullet/type/client";
+} from "@alvarolm/saferbullet/type/client";
 
 export class IFrameWidget extends WidgetType {
   iframe?: HTMLIFrameElement;

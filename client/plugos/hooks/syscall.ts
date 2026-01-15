@@ -1,6 +1,6 @@
 import type { Hook, Manifest } from "../types.ts";
 import type { SysCallMapping, System } from "../system.ts";
-import type { SyscallHookT } from "@silverbulletmd/silverbullet/type/manifest";
+import type { SyscallHookT } from "@alvarolm/saferbullet/type/manifest";
 
 export class SyscallHook implements Hook<SyscallHookT> {
   apply(system: System<SyscallHookT>): void {

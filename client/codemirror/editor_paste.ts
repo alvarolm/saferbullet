@@ -12,13 +12,13 @@ import {
   addParentPointers,
   findParentMatching,
   nodeAtPos,
-} from "@silverbulletmd/silverbullet/lib/tree";
-import { maximumDocumentSize } from "@silverbulletmd/silverbullet/constants";
-import { safeRun } from "@silverbulletmd/silverbullet/lib/async";
-import { resolveMarkdownLink } from "@silverbulletmd/silverbullet/lib/resolve";
-import { localDateString } from "@silverbulletmd/silverbullet/lib/dates";
-import type { UploadFile } from "@silverbulletmd/silverbullet/type/client";
-import { isValidName, isValidPath } from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/tree";
+import { maximumDocumentSize } from "@alvarolm/saferbullet/constants";
+import { safeRun } from "@alvarolm/saferbullet/lib/async";
+import { resolveMarkdownLink } from "@alvarolm/saferbullet/lib/resolve";
+import { localDateString } from "@alvarolm/saferbullet/lib/dates";
+import type { UploadFile } from "@alvarolm/saferbullet/type/client";
+import { isValidName, isValidPath } from "@alvarolm/saferbullet/lib/ref";
 
 const turndownService = new TurndownService({
   hr: "---",

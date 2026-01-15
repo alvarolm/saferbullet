@@ -1,4 +1,4 @@
-module github.com/silverbulletmd/silverbullet
+module github.com/alvarolm/saferbullet
 
 go 1.25.1
 
@@ -17,6 +17,7 @@ require (
 	github.com/stretchr/testify v1.11.1
 )
 
+// use local
 replace github.com/alvarolm/saferbullet/plug-signer => ./plug-signer
 
 require (

@@ -3,7 +3,7 @@ import { createMockSystem } from "../../plug-api/system_mock.ts";
 import type {
   ObjectValue,
   PageMeta,
-} from "@silverbulletmd/silverbullet/type/index";
+} from "@alvarolm/saferbullet/type/index";
 import { extractFrontMatter } from "./frontmatter.ts";
 import { assertEquals } from "@std/assert";
 import { indexData } from "./data.ts";

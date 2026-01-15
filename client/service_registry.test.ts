@@ -1,4 +1,4 @@
-import type { EventHookT } from "@silverbulletmd/silverbullet/type/manifest";
+import type { EventHookT } from "@alvarolm/saferbullet/type/manifest";
 import { EventHook } from "./plugos/hooks/event.ts";
 import { System } from "./plugos/system.ts";
 import { ServiceRegistry } from "./service_registry.ts";

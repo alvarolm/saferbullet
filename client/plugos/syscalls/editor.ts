@@ -23,17 +23,17 @@ import type { SysCallMapping } from "../system.ts";
 import type {
   FilterOption,
   UploadFile,
-} from "@silverbulletmd/silverbullet/type/client";
+} from "@alvarolm/saferbullet/type/client";
 import { openSearchPanel } from "@codemirror/search";
 import {
   isValidPath,
   parseToRef,
   type Path,
   type Ref,
-} from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/ref";
 import { insertNewlineContinueMarkup } from "@codemirror/lang-markdown";
-import type { VimConfig } from "@silverbulletmd/silverbullet/type/config";
-import type { PageMeta } from "@silverbulletmd/silverbullet/type/index";
+import type { VimConfig } from "@alvarolm/saferbullet/type/config";
+import type { PageMeta } from "@alvarolm/saferbullet/type/index";
 
 export function editorSyscalls(client: Client): SysCallMapping {
   const syscalls: SysCallMapping = {

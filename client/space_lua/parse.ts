@@ -2,7 +2,7 @@ import { lezerToParseTree } from "../../client/markdown_parser/parse_tree.ts";
 import {
   cleanTree,
   type ParseTree,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import { parser } from "./parse-lua.js";
 import { styleTags, tags as t } from "@lezer/highlight";
 import { indentNodeProp, LRLanguage } from "@codemirror/language";

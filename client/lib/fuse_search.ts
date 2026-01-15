@@ -1,7 +1,7 @@
 // @deno-types="https://deno.land/x/fuse@v6.4.1/dist/fuse.d.ts"
 import Fuse from "fuse";
-import type { FilterOption } from "@silverbulletmd/silverbullet/type/client";
-import { fileName } from "@silverbulletmd/silverbullet/lib/resolve";
+import type { FilterOption } from "@alvarolm/saferbullet/type/client";
+import { fileName } from "@alvarolm/saferbullet/lib/resolve";
 
 type FuseOption = FilterOption & {
   baseName: string;

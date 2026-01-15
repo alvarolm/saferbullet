@@ -20,10 +20,10 @@ import {
 import {
   encodeRef,
   getNameFromPath,
-} from "@silverbulletmd/silverbullet/lib/ref";
+} from "@alvarolm/saferbullet/lib/ref";
 import { resolveASTReference } from "../space_lua.ts";
 import { LuaWidget } from "./lua_widget.ts";
-import type { PageMeta } from "@silverbulletmd/silverbullet/type/index";
+import type { PageMeta } from "@alvarolm/saferbullet/type/index";
 
 export function luaDirectivePlugin(client: Client) {
   return decoratorStateField((state: EditorState) => {

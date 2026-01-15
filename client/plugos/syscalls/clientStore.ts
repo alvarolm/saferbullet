@@ -1,7 +1,7 @@
 import type { SysCallMapping } from "../../plugos/system.ts";
 import type { DataStore } from "../../data/datastore.ts";
 
-import type { KvKey } from "@silverbulletmd/silverbullet/type/datastore";
+import type { KvKey } from "@alvarolm/saferbullet/type/datastore";
 
 export function clientStoreSyscalls(
   ds: DataStore,

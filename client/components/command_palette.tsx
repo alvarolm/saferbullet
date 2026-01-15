@@ -5,7 +5,7 @@ import type {
 } from "@codemirror/autocomplete";
 import { Terminal } from "preact-feather";
 import type { Command } from "../types/command.ts";
-import type { FilterOption } from "@silverbulletmd/silverbullet/type/client";
+import type { FilterOption } from "@alvarolm/saferbullet/type/client";
 
 export function CommandPalette({
   commands,

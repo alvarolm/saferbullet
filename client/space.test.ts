@@ -1,10 +1,10 @@
-import { sleep } from "@silverbulletmd/silverbullet/lib/async";
+import { sleep } from "@alvarolm/saferbullet/lib/async";
 import { MemoryKvPrimitives } from "./data/memory_kv_primitives.ts";
 import { EventHook } from "./plugos/hooks/event.ts";
 import { Space } from "./space.ts";
 import { DataStoreSpacePrimitives } from "./spaces/datastore_space_primitives.ts";
 import { assertEquals } from "@std/assert";
-import { parseToRef } from "@silverbulletmd/silverbullet/lib/ref";
+import { parseToRef } from "@alvarolm/saferbullet/lib/ref";
 
 const testPage = `
 Some paragraph

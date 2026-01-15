@@ -1,4 +1,16 @@
 
+# namespace
+
+- go module name changed from `github.com/alvarolm/silverbullet` to `github.com/alvarolm/saferbullet`
+- deno namespace changed from `silverbulletmd/silverbullet` to `github.com/alvarolm/saferbullet`, the new namespace is reserved in the jsr registry, but will not be used, as local files will be used instead, this was done to prevent any possible conflicts with the original silverbullet repository
+
+# ci cd
+
+- REMOVED: docker image building and pushing, if you need use docker, copy the repo and use the provided dockerfile
+
+- REMOVED: edge builds, not compatible with the security features of SaferBullet
+
+
 # plugins
 
 ## builder

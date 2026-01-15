@@ -1,4 +1,4 @@
-import { datastore, markdown } from "@silverbulletmd/silverbullet/syscalls";
+import { datastore, markdown } from "@alvarolm/saferbullet/syscalls";
 import { ttlCache } from "../../plug-api/lib/memory_cache.ts";
 import type { LuaCollectionQuery } from "../../client/space_lua/query_collection.ts";
 import {
@@ -9,7 +9,7 @@ import {
 import {
   collectNodesOfType,
   renderToText,
-} from "@silverbulletmd/silverbullet/lib/tree";
+} from "@alvarolm/saferbullet/lib/tree";
 import { applyPatches, type YamlPatch } from "../../plug-api/lib/yaml.ts";
 import type { ObjectValue } from "../../plug-api/types/index.ts";
 

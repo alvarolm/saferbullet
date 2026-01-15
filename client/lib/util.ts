@@ -1,4 +1,4 @@
-import type { FileMeta } from "@silverbulletmd/silverbullet/type/index";
+import type { FileMeta } from "@alvarolm/saferbullet/type/index";
 
 export function utcDateString(mtime: number): string {
   return new Date(mtime).toUTCString();
