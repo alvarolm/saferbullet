@@ -2,9 +2,9 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/alvarolm/saferbullet/total)
 
 > [!CAUTION]
-> - This code has not been actively tested. It may contain unexpected behaviors
+> - This software has not been actively tested. It may contain unexpected behaviors
 > - Contributions, opinions or feedback of any kind are more than welcome and greatly appreciated!
-> - This is an effort with NO GUARANTEE WHATSOEVER, use at your own risk.
+> - Mind there is NO GUARANTEE WHATSOEVER for this software, use at your own risk.
 
 References:
 - [SilverBullet](https://github.com/silverbulletmd/silverbullet)
@@ -33,3 +33,7 @@ I'm also evaluating the possibility of a "ready to deploy" binary that includes 
   - external communication protection, proxy api (domain whitelisting) [TODO]
 
 see [saferbullet-changelog.md][saferbullet-changelog.md] for the current implementation status
+
+## LICENSE
+MIT
+[LICENSE.md][./LICENSE.md]
