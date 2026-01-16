@@ -50,8 +50,7 @@ export function AnythingPicker({
       // Can't really add tags to document as of right now, but maybe in the future
       let description: string | undefined;
       if (documentMeta.tags) {
-        description =
-          (description || "") +
+        description = (description || "") +
           documentMeta.tags.map((tag) => `#${tag}`).join(" ");
       }
 
@@ -106,8 +105,7 @@ export function AnythingPicker({
           description = "(a.k.a. " + aliases.join(", ") + ") ";
         }
         if (pageMeta.tags) {
-          description =
-            (description || "") +
+          description = (description || "") +
             pageMeta.tags.map((tag) => `#${tag}`).join(" ");
         }
         options.push({
@@ -165,15 +163,13 @@ export function AnythingPicker({
 
   return (
     <FilterList
-      placeholder={
-        mode === "page"
-          ? "Page"
-          : mode === "meta"
-          ? "#meta page"
-          : mode === "document"
-          ? "Document"
-          : "Any page or Document, also hidden"
-      }
+      placeholder={mode === "page"
+        ? "Page"
+        : mode === "meta"
+        ? "#meta page"
+        : mode === "document"
+        ? "Document"
+        : "Any page or Document, also hidden"}
       label="Open"
       options={options}
       vimMode={vimMode}
@@ -231,18 +227,16 @@ export function AnythingPicker({
         if (mode !== "all") {
           // Filter out hidden pages
           options = options.filter(
-            (page) => !(page.meta.pageDecoration?.hide === true)
+            (page) => !(page.meta.pageDecoration?.hide === true),
           );
         }
         return options;
       }}
       allowNew={allowNew}
-      helpText={
-        `Press <code>Enter</code> to open the selected ${openablePageNoun}` +
+      helpText={`Press <code>Enter</code> to open the selected ${openablePageNoun}` +
         (allowNew
           ? `, or <code>Shift-Enter</code> to create a new ${creatablePageNoun} with this exact name.`
-          : "")
-      }
+          : "")}
       newHint={`Create ${creatablePageNoun}`}
       completePrefix={completePrefix}
       onSelect={(opt) => {

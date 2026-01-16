@@ -1,9 +1,4 @@
-import {
-  editor,
-  markdown,
-  mq,
-  system,
-} from "@alvarolm/saferbullet/syscalls";
+import { editor, markdown, mq, system } from "@alvarolm/saferbullet/syscalls";
 
 export async function parsePageCommand() {
   console.log(

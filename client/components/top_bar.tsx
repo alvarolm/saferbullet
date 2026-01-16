@@ -61,14 +61,12 @@ export function TopBar({
             <div className="sb-page-prefix">{pageNamePrefix}</div>
             <span
               id="sb-current-page"
-              className={
-                (isLoading
-                  ? "sb-loading"
-                  : unsavedChanges
-                  ? "sb-unsaved"
-                  : "sb-saved") +
-                (cssClass ? " sb-decorated-object " + cssClass : "")
-              }
+              className={(isLoading
+                ? "sb-loading"
+                : unsavedChanges
+                ? "sb-unsaved"
+                : "sb-saved") +
+                (cssClass ? " sb-decorated-object " + cssClass : "")}
             >
               <MiniEditor
                 text={pageName ?? ""}
@@ -84,10 +82,8 @@ export function TopBar({
                 onEnter={(newName) => {
                   onRename(newName);
                 }}
-                editable={
-                  !client.ui.viewState.uiOptions.forcedROMode &&
-                  !client.bootConfig.readOnly
-                }
+                editable={!client.ui.viewState.uiOptions.forcedROMode &&
+                  !client.bootConfig.readOnly}
               />
             </span>
             {notifications.length > 0 && (
@@ -118,9 +114,8 @@ export function TopBar({
               )}
             </div>
             <div
-              className={
-                "sb-actions " + (mobileMenuStyle ? mobileMenuStyle : "")
-              }
+              className={"sb-actions " +
+                (mobileMenuStyle ? mobileMenuStyle : "")}
             >
               {actionButtons.map((actionButton) => {
                 const button = (
@@ -146,13 +141,13 @@ export function TopBar({
                   </button>
                 );
 
-                return actionButton.href ? (
-                  <a href={actionButton.href} key={actionButton.href}>
-                    {button}
-                  </a>
-                ) : (
-                  button
-                );
+                return actionButton.href
+                  ? (
+                    <a href={actionButton.href} key={actionButton.href}>
+                      {button}
+                    </a>
+                  )
+                  : button;
               })}
             </div>
           </div>
