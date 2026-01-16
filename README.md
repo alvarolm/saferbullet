@@ -20,8 +20,8 @@ I'm also evaluating the possibility of a "ready to deploy" binary that includes 
 
 ## Improvements
 
-- [WIP] regular checks for vulnerabilities in dependencies
-- [TODO] updated dependencies
+- regular checks for vulnerabilities in dependencies **(contact me or send a PR if I miss any)**
+- updated dependencies **(contact me or send a PR if I miss any)**
 - [TODO] saner defaults
 - [WIP] elimination of unverified remote code loading
 - plugin security:
