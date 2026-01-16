@@ -24,7 +24,7 @@ func NewLocalShell(cwd string, cmdWhiteList string) *LocalShell {
 	return &LocalShell{
 		Cwd:          cwd,
 		CmdWhiteList: whiteListedCommands,
-		AllowAllCmds: len(whiteListedCommands) == 0,
+		AllowAllCmds: false, // only whitelisted commands allowed
 	}
 }
 
