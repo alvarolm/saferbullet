@@ -1,10 +1,10 @@
 module github.com/alvarolm/saferbullet
 
-go 1.25.1
+go 1.25.4
 
 require (
 	github.com/Diogenesoftoronto/go-gitignore v1.1.0
-	github.com/alvarolm/saferbullet/plug-signer v0.0.0-00010101000000-000000000000
+	github.com/alvarolm/saferbullet/plug-signer v0.0.0-20260116001005-c474caa18d16
 	github.com/charlievieth/fastwalk v1.0.14
 	github.com/djherbis/times v1.6.0
 	github.com/go-chi/chi/v5 v5.2.4
