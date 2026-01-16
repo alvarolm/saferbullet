@@ -889,14 +889,6 @@ export class Client {
     >;
   }
 
-  miniEditorComplete(
-    context: CompletionContext,
-  ): Promise<CompletionResult | null> {
-    return this.completeWithEvent(context, "minieditor:complete") as Promise<
-      CompletionResult | null
-    >;
-  }
-
   async reloadEditor() {
     if (!this.systemReady) return;
 
@@ -1177,13 +1169,6 @@ export class Client {
 
     this.space.watchFile(path);
 
-    // Note: these events are dispatched asynchronously deliberately (not waiting for results)
-    this.eventHook.dispatchEvent(
-      loadingDifferentPath ? "editor:pageLoaded" : "editor:pageReloaded",
-      pageName,
-      previousPath ? getNameFromPath(previousPath) : undefined,
-    ).catch(console.error);
-
     if (navigateWithinPage) {
       // Setup scroll position, cursor position, etc
       try {
@@ -1192,6 +1177,12 @@ export class Client {
         // We don't really care if this fails.
       }
     }
+    // Note: these events are dispatched asynchronously deliberately (not waiting for results)
+    this.eventHook.dispatchEvent(
+      loadingDifferentPath ? "editor:pageLoaded" : "editor:pageReloaded",
+      pageName,
+      previousPath ? getNameFromPath(previousPath) : undefined,
+    ).catch(console.error);
 
     // If a cursor marker was found for a newly-created page, place the
     // cursor there now (after navigateWithinPage so it doesn't get

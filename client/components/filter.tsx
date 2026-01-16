@@ -1,8 +1,4 @@
 import type { FeatherProps } from "preact-feather/types";
-import type {
-  CompletionContext,
-  CompletionResult,
-} from "@codemirror/autocomplete";
 import type { FunctionalComponent } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import type { FilterOption } from "@alvarolm/saferbullet/type/client";
@@ -10,6 +6,7 @@ import { MiniEditor } from "./mini_editor.tsx";
 import { fuzzySearchAndSort } from "../lib/fuse_search.ts";
 import { deepEqual } from "../../plug-api/lib/json.ts";
 import { AlwaysShownModal } from "./basic_modals.tsx";
+import type { EditorView } from "@codemirror/view";
 
 export function FilterList({
   placeholder,
@@ -17,7 +14,6 @@ export function FilterList({
   label,
   onSelect,
   onKeyPress,
-  completer,
   vimMode,
   darkMode,
   preFilter,
@@ -31,13 +27,12 @@ export function FilterList({
   placeholder: string;
   options: FilterOption[];
   label: string;
-  onKeyPress?: (key: string, currentText: string) => void;
+  onKeyPress?: (view: EditorView, event: KeyboardEvent) => boolean;
   onSelect: (option: FilterOption | undefined) => void;
   preFilter?: (options: FilterOption[], phrase: string) => FilterOption[];
   phrasePreprocessor?: (phrase: string) => string;
   vimMode: boolean;
   darkMode?: boolean;
-  completer: (context: CompletionContext) => Promise<CompletionResult | null>;
   allowNew?: boolean;
   completePrefix?: string;
   helpText: string;
@@ -52,38 +47,6 @@ export function FilterList({
     ),
   );
   const [selectedOption, setSelectionOption] = useState(0);
-
-  // Group options by category while preserving Fuse.js order
-  function groupOptionsByCategory(
-    options: FilterOption[],
-  ): Array<
-    { type: "category"; name: string } | {
-      type: "option";
-      option: FilterOption;
-      originalIndex: number;
-    }
-  > {
-    const grouped: Array<
-      { type: "category"; name: string } | {
-        type: "option";
-        option: FilterOption;
-        originalIndex: number;
-      }
-    > = [];
-    const seenCategories = new Set<string>();
-
-    let originalIndex = 0;
-    for (const option of options) {
-      if (option.category && !seenCategories.has(option.category)) {
-        seenCategories.add(option.category);
-        grouped.push({ type: "category", name: option.category });
-      }
-      grouped.push({ type: "option", option, originalIndex });
-      originalIndex++;
-    }
-
-    return grouped;
-  }
 
   const selectedElementRef = useRef<HTMLDivElement>(null);
 
@@ -148,7 +111,6 @@ export function FilterList({
           vimStartInInsertMode={true}
           focus={true}
           darkMode={darkMode}
-          completer={completer}
           placeholderText={placeholder}
           onEnter={(_newText, shiftDown) => {
             onSelect(
@@ -165,9 +127,25 @@ export function FilterList({
             setText(text);
           }}
           onKeyUp={(view, e) => {
-            // This event is triggered after the key has been processed by CM already
+            if (e.code === "Space" && e.altKey) {
+              if (matchingOptions.length > 0) {
+                const text = view.state.sliceDoc().trimEnd(); // space already added, remove it
+                const option = matchingOptions[0];
+                if (option.name.toLowerCase().startsWith(text.toLowerCase())) {
+                  // If the prefixes are the same, add one more segment
+                  let nextSlash = option.name.indexOf("/", text.length + 1);
+                  if (nextSlash === -1) {
+                    nextSlash = Infinity;
+                  }
+                  setText(option.name.slice(0, nextSlash));
+                } else {
+                  setText(`${option.name.split("/")[0]}/`);
+                }
+              }
+              return true;
+            }
             if (onKeyPress) {
-              onKeyPress(e.key, view.state.sliceDoc());
+              return onKeyPress(view, e);
             }
             return false;
           }}
@@ -222,79 +200,55 @@ export function FilterList({
       <div className="sb-result-list" tabIndex={-1}>
         {matchingOptions && matchingOptions.length > 0
           ? (() => {
-            const groupedItems = groupOptionsByCategory(matchingOptions);
             let optionIndex = 0;
 
-            return groupedItems.map((item) => {
-              if (item.type === "category") {
-                return (
-                  <div
-                    key={`category-${item.name}`}
-                    className="sb-category-header"
-                  >
-                    {item.name}
-                  </div>
-                );
-              } else {
-                const currentOptionIndex = optionIndex;
-                optionIndex++;
+            return matchingOptions.map((option) => {
+              const currentOptionIndex = optionIndex;
+              optionIndex++;
 
-                return (
-                  <div
-                    key={`option-${currentOptionIndex}`}
-                    ref={selectedOption === currentOptionIndex
-                      ? selectedElementRef
-                      : undefined}
-                    className={(selectedOption === currentOptionIndex
-                      ? "sb-option sb-selected-option"
-                      : "sb-option") +
-                      (item.option.cssClass
-                        ? " sb-decorated-object " + item.option.cssClass
-                        : "")}
-                    onMouseMove={() => {
-                      if (selectedOption !== currentOptionIndex) {
-                        setSelectionOption(currentOptionIndex);
-                      }
-                    }}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onSelect(item.option);
-                    }}
-                  >
-                    {Icon && (
-                      <span className="sb-icon">
-                        <Icon width={16} height={16} />
-                      </span>
-                    )}
-                    <span className="sb-name">
-                      {(() => {
-                        let displayName = item.option.name;
-                        // Remove category prefix for display (e.g., "Block: Close Sidebar" -> "Close Sidebar")
-                        if (
-                          item.option.category &&
-                          displayName.startsWith(item.option.category + ": ")
-                        ) {
-                          displayName = displayName.substring(
-                            item.option.category.length + 2,
-                          );
-                        }
-                        return (item.option.prefix ?? "") + displayName;
-                      })()}
+              return (
+                <div
+                  key={`option-${currentOptionIndex}`}
+                  ref={selectedOption === currentOptionIndex
+                    ? selectedElementRef
+                    : undefined}
+                  className={(selectedOption === currentOptionIndex
+                    ? "sb-option sb-selected-option"
+                    : "sb-option") +
+                    (option.cssClass
+                      ? " sb-decorated-object " + option.cssClass
+                      : "")}
+                  onMouseMove={() => {
+                    if (selectedOption !== currentOptionIndex) {
+                      setSelectionOption(currentOptionIndex);
+                    }
+                  }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onSelect(option);
+                  }}
+                >
+                  {Icon && (
+                    <span className="sb-icon">
+                      <Icon width={16} height={16} />
                     </span>
-                    {item.option.hint && (
-                      <span
-                        className={"sb-hint" +
-                          (item.option.hintInactive ? " sb-hint-inactive" : "")}
-                      >
-                        {item.option.hint}
-                      </span>
-                    )}
-                    <div className="sb-description">
-                      {item.option.description}
-                    </div>
+                  )}
+                  <span className="sb-name">
+                    {(option.prefix ?? "") + option.name}
+                  </span>
+                  {option.hint && (
+                    <span
+                      className={"sb-hint" +
+                        (option.hintInactive ? " sb-hint-inactive" : "")}
+                    >
+                      {option.hint}
+                    </span>
+                  )}
+                  <div className="sb-description">
+                    {option.description}
                   </div>
-                );
-              }
+                </div>
+              );
             });
           })()
           : null}

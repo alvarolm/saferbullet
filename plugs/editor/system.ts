@@ -1,4 +1,9 @@
-import { editor, markdown, system } from "@alvarolm/saferbullet/syscalls";
+import {
+  editor,
+  markdown,
+  mq,
+  system,
+} from "@alvarolm/saferbullet/syscalls";
 
 export async function parsePageCommand() {
   console.log(
@@ -26,7 +31,13 @@ export async function wipeAndLogoutCommand() {
   await system.wipeClient(true);
 }
 
+/**
+ * Does the following:
+ * - Flushes all message queues
+ * - Cleans IndexedDB databases not connected to the current space
+ */
 export async function cleanClientCommand() {
+  await mq.flushAllQueues();
   if (await system.cleanDatabases()) {
     await editor.alert("Successfullly cleaned unnecessary client databases.");
   } else {

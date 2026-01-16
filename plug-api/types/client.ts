@@ -7,7 +7,6 @@ export type FilterOption = {
   hint?: string;
   hintInactive?: boolean;
   classes?: string;
-  category?: string;
   prefix?: string;
 } & Record<string, any>;
 
@@ -49,7 +48,6 @@ export type UploadFile = {
 
 export type AppEvent =
   | "page:click"
-  | "minieditor:complete"
   | "slash:complete"
   | "editor:complete"
   | "editor:lint"

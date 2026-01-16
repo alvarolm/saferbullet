@@ -1,15 +1,9 @@
-import type {
-  CompletionContext,
-  CompletionResult,
-} from "@codemirror/autocomplete";
 import type { ComponentChildren, FunctionalComponent } from "preact";
 import type { Notification } from "@alvarolm/saferbullet/type/client";
-import type { FeatherProps } from "preact-feather/types";
-import type { IconBaseProps } from "react-icons/types";
 import { MiniEditor } from "./mini_editor.tsx";
 
 export type ActionButton = {
-  icon: FunctionalComponent<FeatherProps> | FunctionalComponent<IconBaseProps>;
+  icon: FunctionalComponent<any>;
   description: string;
   class?: string;
   callback: () => void;
@@ -29,7 +23,6 @@ export function TopBar({
   vimMode,
   progressPercentage,
   progressType,
-  completer,
   lhs,
   onClick,
   rhs,
@@ -48,7 +41,6 @@ export function TopBar({
   progressType?: string;
   onRename: (newName?: string) => Promise<void>;
   onClick: () => void;
-  completer: (context: CompletionContext) => Promise<CompletionResult | null>;
   actionButtons: ActionButton[];
   lhs?: ComponentChildren;
   rhs?: ComponentChildren;
@@ -69,12 +61,14 @@ export function TopBar({
             <div className="sb-page-prefix">{pageNamePrefix}</div>
             <span
               id="sb-current-page"
-              className={(isLoading
-                ? "sb-loading"
-                : unsavedChanges
-                ? "sb-unsaved"
-                : "sb-saved") +
-                (cssClass ? " sb-decorated-object " + cssClass : "")}
+              className={
+                (isLoading
+                  ? "sb-loading"
+                  : unsavedChanges
+                  ? "sb-unsaved"
+                  : "sb-saved") +
+                (cssClass ? " sb-decorated-object " + cssClass : "")
+              }
             >
               <MiniEditor
                 text={pageName ?? ""}
@@ -87,12 +81,13 @@ export function TopBar({
                     return onRename();
                   }
                 }}
-                completer={completer}
                 onEnter={(newName) => {
                   onRename(newName);
                 }}
-                editable={!client.ui.viewState.uiOptions.forcedROMode &&
-                  !client.bootConfig.readOnly}
+                editable={
+                  !client.ui.viewState.uiOptions.forcedROMode &&
+                  !client.bootConfig.readOnly
+                }
               />
             </span>
             {notifications.length > 0 && (
@@ -108,24 +103,24 @@ export function TopBar({
               </div>
             )}
             <div className="sb-sync-progress">
-              {progressPercentage !== undefined &&
-                (
+              {progressPercentage !== undefined && (
+                <div
+                  className="progress-wrapper"
+                  title={`${progressType} progress: ${progressPercentage}%`}
+                >
                   <div
-                    className="progress-wrapper"
-                    title={`${progressType} progress: ${progressPercentage}%`}
+                    className="progress-bar"
+                    style={`background: radial-gradient(closest-side, var(--top-background-color) 79%, transparent 80% 100%), conic-gradient(var(--progress-${progressType}-color) ${progressPercentage}%, var(--progress-background-color) 0);`}
                   >
-                    <div
-                      className="progress-bar"
-                      style={`background: radial-gradient(closest-side, var(--top-background-color) 79%, transparent 80% 100%), conic-gradient(var(--progress-${progressType}-color) ${progressPercentage}%, var(--progress-background-color) 0);`}
-                    >
-                      {progressPercentage}
-                    </div>
+                    {progressPercentage}
                   </div>
-                )}
+                </div>
+              )}
             </div>
             <div
-              className={"sb-actions " +
-                (mobileMenuStyle ? mobileMenuStyle : "")}
+              className={
+                "sb-actions " + (mobileMenuStyle ? mobileMenuStyle : "")
+              }
             >
               {actionButtons.map((actionButton) => {
                 const button = (
@@ -139,7 +134,8 @@ export function TopBar({
                     onBlur={() => {
                       // Close the hamburger menu in mobile mode if the action button loses focus after callback
                       if (mobileMenuStyle === "hamburger") {
-                        document.querySelector("#sb-top .sb-actions.hamburger")
+                        document
+                          .querySelector("#sb-top .sb-actions.hamburger")
                           ?.classList.remove("open");
                       }
                     }}
@@ -150,13 +146,13 @@ export function TopBar({
                   </button>
                 );
 
-                return actionButton.href
-                  ? (
-                    <a href={actionButton.href} key={actionButton.href}>
-                      {button}
-                    </a>
-                  )
-                  : button;
+                return actionButton.href ? (
+                  <a href={actionButton.href} key={actionButton.href}>
+                    {button}
+                  </a>
+                ) : (
+                  button
+                );
               })}
             </div>
           </div>

@@ -1,8 +1,4 @@
 import { FilterList } from "./filter.tsx";
-import type {
-  CompletionContext,
-  CompletionResult,
-} from "@codemirror/autocomplete";
 import { Terminal } from "preact-feather";
 import type { Command } from "../types/command.ts";
 import type { FilterOption } from "@alvarolm/saferbullet/type/client";
@@ -12,12 +8,10 @@ export function CommandPalette({
   onTrigger,
   vimMode,
   darkMode,
-  completer,
 }: {
   commands: Map<string, Command>;
   vimMode: boolean;
   darkMode?: boolean;
-  completer: (context: CompletionContext) => Promise<CompletionResult | null>;
   onTrigger: (command: Command | undefined) => void;
 }) {
   const options: FilterOption[] = [];
@@ -27,17 +21,12 @@ export function CommandPalette({
       continue;
     }
 
-    // Extract category from command name (e.g., "Block: Toggle" -> "Block")
-    const colonIndex = name.indexOf(": ");
-    const category = colonIndex > 0 ? name.substring(0, colonIndex) : undefined;
-
     options.push({
       name: name,
       hint: isMac && def.mac ? def.mac : def.key,
       orderId: def.lastRun !== undefined
         ? -def.lastRun
         : def.priority || Infinity,
-      category: category,
     });
     // console.log("Options", options);
   }
@@ -48,7 +37,6 @@ export function CommandPalette({
       options={options}
       allowNew={false}
       icon={Terminal}
-      completer={completer}
       vimMode={vimMode}
       darkMode={darkMode}
       helpText="Start typing the command name to filter results, press <code>Enter</code> to run."
