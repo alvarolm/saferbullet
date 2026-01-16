@@ -22,11 +22,13 @@ I'm also evaluating the possibility of a "ready to deploy" binary that includes 
 
 - regular checks for vulnerabilities in dependencies **(contact me or send a PR if I miss any)**
 - updated dependencies **(contact me or send a PR if I miss any)**
-- [TODO] saner defaults
-- [WIP] elimination of unverified remote code loading
+- saner defaults:
+  - server shell commands must be whitelisted
+  - TODO: look for any others
+- elimination of unverified remote code loading in plugin compiler
 - plugin security:
-  - [DONE] signing and verification of packaged plugins
-  - [DONE] disable minification to ensure compiled code remains human-readable and auditable of packaged plugins
+  - signing and verification of packaged plugins
+  - disable minification to ensure compiled code remains human-readable and auditable of packaged plugins
 - server security:
   - [EVALUATING] file system encryption
   - [EVALUATING] automatic tls encryption and authentication
